@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{ name }} - Resume</title>
+    <link rel="stylesheet" href="resume_style_ats.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="name">{{ name }}</div>
+    {% if tagline %}
+    <div class="tagline">{{ tagline }}</div>
+    {% endif %}
+
+    <div class="contact-line">
+        {% if contact.address %}<span>{{ contact.address }}</span>{% endif %}
+        {% if contact.phone %}<span>|</span><span>{{ contact.phone }}</span>{% endif %}
+        {% if contact.email %}<span>|</span><span>{{ contact.email }}</span>{% endif %}
+    </div>
+    {% if contact.linkedin or contact.github or contact.website %}
+    <div class="contact-line">
+        {% if contact.linkedin %}<span>{{ contact.linkedin }}</span>{% endif %}
+        {% if contact.github %}{% if contact.linkedin %}<span>|</span>{% endif %}<span>{{ contact.github }}</span>{% endif %}
+        {% if contact.website %}{% if contact.linkedin or contact.github %}<span>|</span>{% endif %}<span>{{ contact.website }}</span>{% endif %}
+    </div>
+    {% endif %}
+</header>
+
+<!-- Summary -->
+{% if summary %}
+<section>
+    <h2 class="section-title">Professional Summary</h2>
+    <div class="summary">
+        {{ summary }}
+    </div>
+</section>
+{% endif %}
+
+<!-- Core Competencies -->
+{% if soft_skills %}
+<section>
+    <h2 class="section-title">Core Competencies</h2>
+    <div class="skills-content">
+        {{ soft_skills|join(', ') }}
+    </div>
+</section>
+{% endif %}
+
+<!-- Experience -->
+{% if experience %}
+<section>
+    <h2 class="section-title">Professional Experience</h2>
+    {% for job in experience %}
+    <div class="experience-item">
+        <div class="experience-header">
+            <div class="experience-role-company">
+                {{ job.role }} - {{ job.company }}
+            </div>
+            <div class="experience-dates-location">
+                {{ job.start }} - {{ job.end }}{% if job.location %} | {{ job.location }}{% endif %}
+            </div>
+        </div>
+        {% if job.bullets %}
+        <ul class="experience-bullets">
+            {% for bullet in job.bullets %}
+            <li>{{ bullet }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endfor %}
+</section>
+{% endif %}
+
+<!-- Speaking Engagements -->
+{% if speaking_engagements %}
+<section>
+    <h2 class="section-title">Speaking Engagements</h2>
+    {% for talk in speaking_engagements %}
+    <div class="speaking-item">
+        <div class="speaking-title">{{ talk.title }}</div>
+        {% if talk.event %}
+        <div class="speaking-event">{{ talk.event }}</div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</section>
+{% endif %}
+
+<!-- Technical Skills -->
+{% if technical_skills %}
+<section>
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-content">
+        {{ technical_skills|join(', ') }}
+    </div>
+</section>
+{% endif %}
+
+<!-- Education -->
+{% if education %}
+<section>
+    <h2 class="section-title">Education</h2>
+    {% for edu in education %}
+    <div class="education-item">
+        <div class="degree">{{ edu.degree }}</div>
+        <div class="school">{{ edu.school }}{% if edu.location %}, {{ edu.location }}{% endif %}</div>
+        <div class="edu-dates">{{ edu.start }} - {{ edu.end }}</div>
+        {% if edu.notes %}
+        <div class="edu-notes">{{ edu.notes }}</div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</section>
+{% endif %}
+
+</body>
+</html>
