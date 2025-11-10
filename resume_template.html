@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{ name }} - Resume</title>
+    <link rel="stylesheet" href="resume_style.css">
+</head>
+<body>
+<div class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="name">{{ name }}</div>
+        {% if tagline %}
+        <div class="tagline">{{ tagline }}</div>
+        {% endif %}
+
+        <div class="contact-line">
+            {% if contact.address %}<span>{{ contact.address }}</span>{% endif %}
+            {% if contact.phone %}<span>{{ contact.phone }}</span>{% endif %}
+            {% if contact.email %}<span>{{ contact.email }}</span>{% endif %}
+        </div>
+        <div class="contact-line">
+            {% if contact.website %}<span>{{ contact.website }}</span>{% endif %}
+            {% if contact.linkedin %}<span>{{ contact.linkedin }}</span>{% endif %}
+            {% if contact.github %}<span>{{ contact.github }}</span>{% endif %}
+        </div>
+    </header>
+
+    <div class="layout">
+        <!-- MAIN COLUMN -->
+        <main>
+            <!-- Summary -->
+            {% if summary %}
+            <section>
+                <h2 class="section-title">Highlights</h2>
+                <div class="summary">
+                    {{ summary }}
+                </div>
+            </section>
+            {% endif %}
+
+            <!-- Experience -->
+            {% if experience %}
+            <section>
+                <h2 class="section-title">Work History</h2>
+                {% for job in experience %}
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-role-company">
+                            {{ job.role }} &mdash; {{ job.company }}
+                        </div>
+                        <div class="experience-dates-location">
+                            {{ job.start }} &ndash; {{ job.end }}{% if job.location %} · {{ job.location }}{% endif %}
+                        </div>
+                    </div>
+                    {% if job.bullets %}
+                    <ul class="experience-bullets">
+                        {% for bullet in job.bullets %}
+                        <li>{{ bullet }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </section>
+            {% endif %}
+
+            <!-- Education -->
+            {% if education %}
+            <section>
+                <h2 class="section-title">Education</h2>
+                {% for edu in education %}
+                <div class="education-item">
+                    <div class="degree">{{ edu.degree }}</div>
+                    <div class="school">{{ edu.school }}{% if edu.location %}, {{ edu.location }}{% endif %}</div>
+                    <div class="edu-dates">{{ edu.start }} – {{ edu.end }}</div>
+                    {% if edu.notes %}
+                    <div class="edu-notes">{{ edu.notes }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </section>
+            {% endif %}
+        </main>
+
+        <!-- SIDEBAR -->
+        <aside>
+            {% if technical_skills %}
+            <section class="sidebar-section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-comma-list">
+                    {{ technical_skills|join(', ') }}
+                </div>
+            </section>
+            {% endif %}
+
+            {% if soft_skills %}
+            <section class="sidebar-section">
+                <h2 class="section-title">Soft Skills</h2>
+                <div class="skills-comma-list">
+                    {{ soft_skills|join(', ') }}
+                </div>
+            </section>
+            {% endif %}
+
+            {% if speaking_engagements %}
+            <section class="sidebar-section">
+                <h2 class="section-title">Speaking</h2>
+                {% for talk in speaking_engagements %}
+                <div class="speaking-item">
+                    <div class="speaking-title">{{ talk.title }}</div>
+                    {% if talk.event %}
+                    <div class="speaking-event">{{ talk.event }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </section>
+            {% endif %}
+        </aside>
+    </div>
+</div>
+</body>
+</html>

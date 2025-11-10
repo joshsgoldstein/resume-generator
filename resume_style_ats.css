@@ -1,0 +1,133 @@
+@page {
+    size: A4;
+    margin: 1in;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #000;
+    line-height: 1.4;
+    font-size: 11pt;
+    max-width: 8.5in;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 11pt;
+    margin-bottom: 8px;
+}
+
+.contact-line {
+    font-size: 10pt;
+    margin: 3px 0;
+}
+
+.contact-line span {
+    margin: 0 8px;
+}
+
+/* Sections */
+h2.section-title {
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    margin: 16px 0 10px;
+    padding-bottom: 2px;
+}
+
+.summary {
+    font-size: 11pt;
+    margin-bottom: 12px;
+}
+
+/* Skills */
+.skills-content {
+    font-size: 11pt;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+/* Experience */
+.experience-item {
+    margin-bottom: 14px;
+}
+
+.experience-header {
+    margin-bottom: 2px;
+}
+
+.experience-role-company {
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+.experience-dates-location {
+    font-size: 10pt;
+    margin-top: 2px;
+}
+
+.experience-bullets {
+    margin: 6px 0 0 20px;
+    padding-left: 0;
+    font-size: 11pt;
+}
+
+.experience-bullets li {
+    margin-bottom: 4px;
+}
+
+/* Speaking */
+.speaking-item {
+    margin-bottom: 8px;
+    font-size: 11pt;
+}
+
+.speaking-title {
+    font-weight: bold;
+}
+
+.speaking-event {
+    font-size: 10pt;
+    margin-top: 2px;
+}
+
+/* Education */
+.education-item {
+    margin-bottom: 10px;
+    font-size: 11pt;
+}
+
+.degree {
+    font-weight: bold;
+}
+
+.school {
+    margin-top: 2px;
+}
+
+.edu-dates {
+    font-size: 10pt;
+    margin-top: 2px;
+}
+
+.edu-notes {
+    margin-top: 2px;
+    font-size: 10pt;
+}
