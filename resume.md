@@ -2,7 +2,7 @@
 name: Josh Goldstein
 tagline: AI-Native Infrastructure · Senior Solutions Architect
 contact:
-  address: 50 N 1st St, Apt 5H, Brooklyn, NY 11249
+  address: 76 Roebling St, Apt 1B, Brooklyn, NY 11211
   phone: 305-321-6144
   email: Josh4goldstein@gmail.com
   website: ''
@@ -107,7 +107,7 @@ experience:
     - Led Lucidworks’ first beta program for new products, coordinating with early adopters to capture feedback and inform roadmap priorities.
     - Collaborated with Customer Success and field teams to turn customer insights into product requirements, driving retention and expansion within enterprise accounts.
 
-    - role: Solution Architect
+  - role: Solution Architect
     company: Lucidworks Inc.
     location: San Francisco, CA
     start: Jun 2017

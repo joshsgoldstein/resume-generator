@@ -65,23 +65,6 @@
                 {% endfor %}
             </section>
             {% endif %}
-
-            <!-- Education -->
-            {% if education %}
-            <section>
-                <h2 class="section-title">Education</h2>
-                {% for edu in education %}
-                <div class="education-item">
-                    <div class="degree">{{ edu.degree }}</div>
-                    <div class="school">{{ edu.school }}{% if edu.location %}, {{ edu.location }}{% endif %}</div>
-                    <div class="edu-dates">{{ edu.start }} – {{ edu.end }}</div>
-                    {% if edu.notes %}
-                    <div class="edu-notes">{{ edu.notes }}</div>
-                    {% endif %}
-                </div>
-                {% endfor %}
-            </section>
-            {% endif %}
         </main>
 
         <!-- SIDEBAR -->
@@ -112,6 +95,23 @@
                     <div class="speaking-title">{{ talk.title }}</div>
                     {% if talk.event %}
                     <div class="speaking-event">{{ talk.event }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </section>
+            {% endif %}
+
+            <!-- Education -->
+            {% if education %}
+            <section class="sidebar-section">
+                <h2 class="section-title">Education</h2>
+                {% for edu in education %}
+                <div class="education-item">
+                    <div class="degree">{{ edu.degree }}</div>
+                    <div class="school">{{ edu.school }}{% if edu.location %}, {{ edu.location }}{% endif %}</div>
+                    <div class="edu-dates">{{ edu.start }} – {{ edu.end }}</div>
+                    {% if edu.notes %}
+                    <div class="edu-notes">{{ edu.notes }}</div>
                     {% endif %}
                 </div>
                 {% endfor %}

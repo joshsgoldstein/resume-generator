@@ -15,9 +15,10 @@ help:
 
 # Install dependencies
 install:
-	@echo "Installing dependencies..."
-	pip install jinja2 weasyprint pyyaml
-	brew install pango glib gobject-introspection || echo "Homebrew packages may already be installed"
+	@echo "Installing Python dependencies..."
+	pip install jinja2 playwright pyyaml
+	@echo "Installing Playwright browsers..."
+	playwright install chromium
 	@echo "✓ Installation complete!"
 
 # Convert markdown to JSON

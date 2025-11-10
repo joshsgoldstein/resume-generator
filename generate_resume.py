@@ -3,9 +3,11 @@ generate_resume.py
 
 Render an HTML + PDF resume from separate JSON, HTML template, and CSS files.
 Generates both a visually appealing version and an ATS-optimized version.
+Uses Playwright for PDF generation to support modern CSS (Grid, Flexbox, etc.)
 
 Usage:
-    pip install jinja2 weasyprint
+    pip install jinja2 playwright pyyaml
+    playwright install chromium
 
     python generate_resume.py
 
@@ -17,7 +19,7 @@ This will produce:
 import json
 from pathlib import Path
 from jinja2 import Template
-from weasyprint import HTML
+from playwright.sync_api import sync_playwright
 
 
 def load_resume_data(json_path: str = "resume_data.json") -> dict:
@@ -32,40 +34,44 @@ def load_template(template_path: str = "resume_template.html") -> Template:
     return Template(template_content)
 
 
-def load_css(css_path: str = "resume_style.css") -> str:
-    """Load CSS content."""
-    return Path(css_path).read_text(encoding='utf-8')
-
-
-def render_resume_html(data: dict, template: Template, css_content: str, css_link: str) -> str:
-    """Render the HTML string from resume data with inline CSS for PDF."""
-    html_output = template.render(**data)
-    # For PDF generation, we need to inline the CSS
-    html_output = html_output.replace(
-        f'<link rel="stylesheet" href="{css_link}">',
-        f'<style>{css_content}</style>'
-    )
-    return html_output
-
-
 def save_html_and_pdf(
     data: dict,
     template: Template,
-    css_content: str,
-    css_link: str,
     html_path: str = "resume.html",
     pdf_path: str = "resume.pdf"
 ):
-    """Generate and save both HTML and PDF versions of the resume."""
-    # For standalone HTML, keep the link tag
-    html_standalone = template.render(**data)
-    Path(html_path).write_text(html_standalone, encoding="utf-8")
-
-    # For PDF, use inline CSS
-    html_for_pdf = render_resume_html(data, template, css_content, css_link)
-    HTML(string=html_for_pdf).write_pdf(pdf_path)
-
+    """Generate and save both HTML and PDF versions of the resume using Playwright."""
+    # Generate HTML
+    html_content = template.render(**data)
+    Path(html_path).write_text(html_content, encoding="utf-8")
     print(f"Saved HTML -> {html_path}")
+
+    # Generate PDF using Playwright (Chromium browser engine)
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page()
+
+        # Load the HTML file
+        page.goto(f'file://{Path(html_path).absolute()}')
+
+        # Wait for page to be fully loaded
+        page.wait_for_load_state('networkidle')
+
+        # Generate PDF with proper settings
+        page.pdf(
+            path=pdf_path,
+            format='A4',
+            margin={
+                'top': '12mm',
+                'right': '12mm',
+                'bottom': '12mm',
+                'left': '12mm'
+            },
+            print_background=True  # Include background colors/images
+        )
+
+        browser.close()
+
     print(f"Saved PDF  -> {pdf_path}")
 
 
@@ -74,31 +80,27 @@ if __name__ == "__main__":
     resume_data = load_resume_data()
 
     print("Generating visually appealing version...")
-    # Load visual components
+    # Load visual template
     template_visual = load_template("resume_template.html")
-    css_visual = load_css("resume_style.css")
     # Generate visual output files
     save_html_and_pdf(
         resume_data,
         template_visual,
-        css_visual,
-        "resume_style.css",
         "resume.html",
         "resume.pdf"
     )
 
     print("\nGenerating ATS-optimized version...")
-    # Load ATS components
+    # Load ATS template
     template_ats = load_template("resume_template_ats.html")
-    css_ats = load_css("resume_style_ats.css")
     # Generate ATS output files
     save_html_and_pdf(
         resume_data,
         template_ats,
-        css_ats,
-        "resume_style_ats.css",
         "resume_ats.html",
         "resume_ats.pdf"
     )
 
     print("\n✓ Both resume versions generated successfully!")
+    print("  Visual version uses modern CSS Grid layout")
+    print("  ATS version uses simple single-column layout")
