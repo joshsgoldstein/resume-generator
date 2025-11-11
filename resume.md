@@ -41,16 +41,15 @@ speaking_engagements:
   event: MLOps World / Gen AI Summit - August 2025
 - title: 'WIP: Data and the Value of Data Agentic Tooling'
   event: Toronto Machine Learning Summit - June 2025
+- title: 'From Model to Microservice > MLOps at Scale'
+  event: Southern Data Science Conference - October 2022
 - title: 'Digital Experience for the Next Generation Knowledge Worker'
   event: Activate 2019
 - title: 'Common Mistakes Made Deploying a Search Application with Lucidworks Fusion'
   event: Activate 2018
 - title: 'Ethics in Tech'
   event: UC Berkeley EECS Honors Program
-- title: 'From Model to Microservice > MLOps at Scale'
-  event: Southern Data Science Conference
-- title: 'Various Apache Solr Meetups'
-  event: ''
+
 
 experience:
   - role: Customer Excellence Solutions Engineer
@@ -59,10 +58,10 @@ experience:
     start: Aug 2024
     end: Oct 2025
     bullets:
-    - Defined and launched the Bring Your Own Cloud (BYOC) offering, closing a Fortune 50 enterprise enabling a centralized platform for GenAi applications and defined the enterprise product serving multiple large enterprise customers.
-    - Partnered cross-functionally to strengthen enterprise positioning through customer feedback, technical enablement content (Jupyter notebooks, tutorials, eBooks), and conference presentations, while advising teams and clients on emerging AI capabilities.
     - Advised and architected complex agentic and semantic search solutions integrating multimodal retrieval and generative pipelines, showing what's possible and bringing enterprise use cases from concept into production enabling sucessful product launches and updates to legacy enterprise systems.
+    - Partnered cross-functionally to strengthen enterprise positioning through customer feedback, technical enablement content (Jupyter notebooks, tutorials, eBooks), and conference presentations, while advising teams and clients on emerging AI capabilities.
     - Mentored new Solutions Engineers and established standardized POC framework and product feedback processes to accelerate enterprise delivery and adoption.
+    - Contributed to defining Weaviate’s on-premises enterprise offering, enabling centralized data platform teams at Fortune 50 and large enterprises to develop generative AI applications on secure, self-managed infrastructure.
 
   - role: Senior Solutions Architect
     company: Seldon
@@ -86,6 +85,16 @@ experience:
     - Led technical and go-to-market execution for Keeeb's federated search platform, overseeing pre-sales, customer enablement, and solution design for enterprise accounts.
     - Contributed to product connectors that improved data accessibility, demonstrated agile engineering execution, and unlocked key features required to close first U.S. enterprise deal.
     - Structured and led a joint engagement with a systems integrator to migrate a customer's legacy data system to the Microsoft ecosystem, aligning technical scope, pricing, and delivery to ensure success.
+
+  - role: Principle
+    company: The Solutions Guys LLC
+    location: New York, NY
+    start: Dec 2020
+    end: Jan 2020
+    bullets:
+    - Led independent consultancy delivering technical architecture and go-to-market strategy for emerging search technology companies
+    - "Project 1: Defined ideal customer profile (ICP), built outreach programs, and guided product enhancements for e-commerce search platform's US market entry"
+    - "Project 2: Designed and architected job search system for stealth career search platform, defining technical requirements and implementation roadmap"
 
   - role: Business Innovation Manager
     company: Lucidworks Inc.
