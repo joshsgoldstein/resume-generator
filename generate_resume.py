@@ -62,10 +62,10 @@ def save_html_and_pdf(
             path=pdf_path,
             format='A4',
             margin={
-                'top': '12mm',
-                'right': '12mm',
-                'bottom': '12mm',
-                'left': '12mm'
+                'top': '10mm',
+                'right': '10mm',
+                'bottom': '10mm',
+                'left': '10mm'
             },
             print_background=True  # Include background colors/images
         )

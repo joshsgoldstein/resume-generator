@@ -134,6 +134,20 @@ experience:
     - Created internal monitoring and alerting dashboards to ensure system reliability and data accuracy.
     - Defined product design, user workflows, and go-to-market strategy in collaboration with the founding team.
 
+
+  - role: SharePoint Consultant
+    company: IImagineIT
+    location: Houston, TX
+    start: Feb 2012
+    end: Apr 2014
+    bullets:
+    - Designed and implemented SharePoint-based knowledge management systems for global oil and gas and construction enterprises, enabling collaboration across globally distributed teams.
+    - Built taxonomy-driven metadata tagging and classification models using the Expert Systems framework - an early NLP engine for document categorization and content discovery.
+    - Configured and deployed SharePoint 2010 and FAST Search on-premises, integrating metadata tagging with enterprise search and developing custom taxonomies for business unit workflows.
+    - Developed custom .NET, PowerShell, JavaScript, and HTML/CSS solutions to extend platform functionality and automate deployment tasks.
+    - Collaborated with Knowledge Management program teams on information architecture strategy, delivered end-user training, and advised on knowledge management best practices.
+
+
 education:
 - degree: 'Bachelor of Science: Information Technology'
   school: Rochester Institute of Technology

@@ -69,20 +69,20 @@
 
         <!-- SIDEBAR -->
         <aside>
+            {% if soft_skills %}
+            <section class="sidebar-section">
+                <h2 class="section-title">Core Competencies</h2>
+                <div class="skills-comma-list">
+                    {{ soft_skills|join(', ') }}
+                </div>
+            </section>
+            {% endif %}
+
             {% if technical_skills %}
             <section class="sidebar-section">
                 <h2 class="section-title">Technical Skills</h2>
                 <div class="skills-comma-list">
                     {{ technical_skills|join(', ') }}
-                </div>
-            </section>
-            {% endif %}
-
-            {% if soft_skills %}
-            <section class="sidebar-section">
-                <h2 class="section-title">Soft Skills</h2>
-                <div class="skills-comma-list">
-                    {{ soft_skills|join(', ') }}
                 </div>
             </section>
             {% endif %}
