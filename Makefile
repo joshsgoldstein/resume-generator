@@ -1,16 +1,17 @@
-.PHONY: help all install md2json json2md generate clean serve
+.PHONY: help all install yaml2json json2yaml generate generate-md clean serve
 
 # Default target
 help:
 	@echo "Resume Generator - Available Commands:"
 	@echo ""
 	@echo "  make install      - Install required Python packages"
-	@echo "  make all          - Convert markdown to JSON and generate all resumes"
-	@echo "  make md2json      - Convert resume.md to resume_data.json"
-	@echo "  make json2md      - Convert resume_data.json to resume.md"
+	@echo "  make all          - Generate all outputs (PDFs + Markdown)"
+	@echo "  make yaml2json    - Convert resume.yaml → resume.json"
+	@echo "  make json2yaml    - Convert resume.json → resume.yaml"
 	@echo "  make generate     - Generate HTML and PDF resumes (both versions)"
+	@echo "  make generate-md  - Generate beautiful markdown resume (resume.md)"
 	@echo "  make serve        - Start HTTP server to view HTML resumes"
-	@echo "  make clean        - Remove generated HTML and PDF files"
+	@echo "  make clean        - Remove all generated files"
 	@echo ""
 
 # Install dependencies
@@ -21,27 +22,33 @@ install:
 	playwright install chromium
 	@echo "✓ Installation complete!"
 
-# Convert markdown to JSON
-md2json:
-	@echo "Converting resume.md → resume_data.json..."
-	python markdown_to_json.py
+# Convert YAML to JSON
+yaml2json:
+	@echo "Converting resume.yaml → resume.json..."
+	python yaml_to_json.py
 
-# Convert JSON to markdown
-json2md:
-	@echo "Converting resume_data.json → resume.md..."
-	python json_to_markdown.py
+# Convert JSON to YAML
+json2yaml:
+	@echo "Converting resume.json → resume.yaml..."
+	python json_to_yaml.py
 
-# Generate all resume versions
+# Generate all resume versions (HTML + PDF)
 generate:
 	@echo "Generating resumes..."
 	python generate_resume.py
 
-# Full workflow: markdown → JSON → resumes
-all: md2json generate
+# Generate beautiful markdown resume
+generate-md:
+	@echo "Generating beautiful markdown..."
+	python generate_markdown.py
+
+# Full workflow: generate all outputs
+all: generate generate-md
 	@echo ""
 	@echo "✓ Complete! Generated files:"
 	@echo "  - resume.html / resume.pdf (visual version)"
 	@echo "  - resume_ats.html / resume_ats.pdf (ATS version)"
+	@echo "  - resume.md (formatted markdown)"
 
 # Start HTTP server to view resumes
 serve:
@@ -56,5 +63,5 @@ serve:
 # Clean generated files
 clean:
 	@echo "Cleaning generated files..."
-	rm -f resume.html resume.pdf resume_ats.html resume_ats.pdf
+	rm -f resume.html resume.pdf resume_ats.html resume_ats.pdf resume.md
 	@echo "✓ Cleaned!"

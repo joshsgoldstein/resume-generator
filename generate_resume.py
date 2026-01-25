@@ -1,7 +1,7 @@
 """
 generate_resume.py
 
-Render an HTML + PDF resume from separate JSON, HTML template, and CSS files.
+Render an HTML + PDF resume from YAML/JSON data, HTML template, and CSS files.
 Generates both a visually appealing version and an ATS-optimized version.
 Uses Playwright for PDF generation to support modern CSS (Grid, Flexbox, etc.)
 
@@ -11,21 +11,31 @@ Usage:
 
     python generate_resume.py
 
-This will produce:
+This will read resume.yaml (or resume.json) and produce:
     - resume.html / resume.pdf (visually appealing version)
     - resume_ats.html / resume_ats.pdf (ATS-optimized version)
 """
 
 import json
+import yaml
 from pathlib import Path
 from jinja2 import Template
 from playwright.sync_api import sync_playwright
 
 
-def load_resume_data(json_path: str = "resume_data.json") -> dict:
-    """Load resume data from JSON file."""
-    with open(json_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
+def load_resume_data() -> dict:
+    """Load resume data from YAML or JSON file."""
+    yaml_path = Path("resume.yaml")
+    json_path = Path("resume.json")
+
+    if yaml_path.exists():
+        content = yaml_path.read_text(encoding='utf-8')
+        return yaml.safe_load(content)
+    elif json_path.exists():
+        with open(json_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    else:
+        raise FileNotFoundError("Neither resume.yaml nor resume.json found")
 
 
 def load_template(template_path: str = "resume_template.html") -> Template:

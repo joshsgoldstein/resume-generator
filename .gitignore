@@ -1,3 +1,15 @@
 ld-json-make-resume.py
 stuff.md
 web-Josh Goldstein-Resume.pdf
+
+# Python
+__pycache__/
+*.pyc
+
+# Generated output files (do not commit)
+resume.json
+resume.md
+resume.html
+resume.pdf
+resume_ats.html
+resume_ats.pdf
