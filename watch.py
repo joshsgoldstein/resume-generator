@@ -33,8 +33,11 @@ if __name__ == "__main__":
     # Initial generation
     regenerate()
 
-    print("\n🚀 Hot reload server running at http://localhost:8000")
-    print("   Watching: resume.yaml, templates, and CSS files")
+    print("\n🚀 Hot reload server running!")
+    print("   http://localhost:8000/            → Landing page")
+    print("   http://localhost:8000/resume.html → Visual resume")
+    print("   http://localhost:8000/resume_ats.html → ATS resume")
+    print("\n   Watching: resume.yaml, templates, CSS files")
     print("   Press Ctrl+C to stop\n")
 
     # Serve current directory

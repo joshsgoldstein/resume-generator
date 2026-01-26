@@ -54,9 +54,9 @@ all: generate generate-md
 # Start HTTP server to view resumes
 serve:
 	@echo "Starting HTTP server on http://localhost:8000"
-	@echo "View your resumes at:"
-	@echo "  - http://localhost:8000/resume.html"
-	@echo "  - http://localhost:8000/resume_ats.html"
+	@echo "  http://localhost:8000/            → Landing page"
+	@echo "  http://localhost:8000/resume.html → Visual resume"
+	@echo "  http://localhost:8000/resume_ats.html → ATS resume"
 	@echo ""
 	@echo "Press Ctrl+C to stop the server"
 	python -m http.server 8000
