@@ -1,4 +1,4 @@
-.PHONY: help all install yaml2json json2yaml generate generate-md clean serve
+.PHONY: help all install yaml2json json2yaml generate generate-md clean serve watch
 
 # Default target
 help:
@@ -11,6 +11,7 @@ help:
 	@echo "  make generate     - Generate HTML and PDF resumes (both versions)"
 	@echo "  make generate-md  - Generate beautiful markdown resume (resume.md)"
 	@echo "  make serve        - Start HTTP server to view HTML resumes"
+	@echo "  make watch        - Hot reload server (auto-regenerates on changes)"
 	@echo "  make clean        - Remove all generated files"
 	@echo ""
 
@@ -53,12 +54,17 @@ all: generate generate-md
 # Start HTTP server to view resumes
 serve:
 	@echo "Starting HTTP server on http://localhost:8000"
-	@echo "View your resumes at:"
-	@echo "  - http://localhost:8000/resume.html"
-	@echo "  - http://localhost:8000/resume_ats.html"
+	@echo "  http://localhost:8000/            → Landing page"
+	@echo "  http://localhost:8000/resume.html → Visual resume"
+	@echo "  http://localhost:8000/resume_ats.html → ATS resume"
 	@echo ""
 	@echo "Press Ctrl+C to stop the server"
 	python -m http.server 8000
+
+# Hot reload server - auto-regenerates on file changes
+watch:
+	@echo "Starting hot reload server..."
+	python watch.py
 
 # Clean generated files
 clean:

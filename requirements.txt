@@ -1,3 +1,4 @@
-markdown 
-weasyprint 
 jinja2
+playwright
+pyyaml
+livereload
