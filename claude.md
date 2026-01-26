@@ -14,8 +14,10 @@ A modern resume generator that creates professional resumes from YAML or JSON da
 - **Python 3** - Core scripting
 - **Jinja2** - HTML templating
 - **Playwright** - PDF generation (Chromium-based for perfect CSS rendering)
-- **PyYAML** - YAML parsing for markdown frontmatter
+- **PyYAML** - YAML parsing
+- **Livereload** - Hot reload development server
 - **Make** - Build automation
+- **GitHub Actions** - Automated deployment to GitHub Pages
 
 ## Key Files
 
@@ -42,7 +44,12 @@ A modern resume generator that creates professional resumes from YAML or JSON da
 - `generate_markdown.py` - Generate beautiful formatted markdown
 - `yaml_to_json.py` - Convert resume.yaml → resume.json
 - `json_to_yaml.py` - Convert resume.json → resume.yaml
+- `watch.py` - Hot reload development server
 - `Makefile` - Common commands and workflows
+
+### Web Files
+- `index.html` - Landing page with buttons for visual/ATS versions + PDF downloads
+- `.github/workflows/deploy.yml` - GitHub Actions workflow for Pages deployment
 
 ## Current Configuration
 
@@ -110,7 +117,14 @@ make all
 # This generates PDFs and beautiful markdown
 ```
 
-### User wants to preview
+### User wants to preview with hot reload
+```bash
+make watch
+# Opens http://localhost:8000 with auto-refresh on file changes
+# Edit resume.yaml and browser auto-updates!
+```
+
+### User wants simple preview (no hot reload)
 ```bash
 make serve
 # Opens http://localhost:8000 to view HTML versions
@@ -170,20 +184,34 @@ make json2yaml   # Convert resume.json → resume.yaml
 make help          # Show all commands
 make install       # Install dependencies
 make all           # Generate all outputs (PDFs + Markdown)
+make watch         # Hot reload server (auto-regenerates on changes)
 make yaml2json     # Convert resume.yaml → resume.json
 make json2yaml     # Convert resume.json → resume.yaml
 make generate      # Generate HTML/PDF from YAML/JSON
 make generate-md   # Generate beautiful markdown
-make serve         # Preview in browser
+make serve         # Preview in browser (no hot reload)
 make clean         # Remove all generated files
 ```
 
 ## Dependencies Installation
 
 ```bash
-pip install jinja2 playwright pyyaml
+pip install jinja2 playwright pyyaml livereload
 playwright install chromium
 ```
+
+## GitHub Pages Deployment
+
+The repo includes `.github/workflows/deploy.yml` which:
+1. Triggers on push to main
+2. Installs Python + Playwright
+3. Runs `generate_resume.py` to create HTML/PDF
+4. Deploys to GitHub Pages
+
+Live URLs:
+- Landing page: https://joshsgoldstein.github.io/resume-generator/
+- Visual resume: https://joshsgoldstein.github.io/resume-generator/resume.html
+- ATS resume: https://joshsgoldstein.github.io/resume-generator/resume_ats.html
 
 ## Troubleshooting
 
