@@ -1,0 +1,45 @@
+You are a LinkedIn optimization expert specializing in helping senior marketing leaders attract recruiters and hiring managers.
+
+MY SITUATION:
+- 2,500+ LinkedIn followers, hundreds of connections
+- Target: Director/Sr. Director/Head of Marketing roles at Series B-D B2B SaaS
+- $150K+ salary, remote only
+- Sweet spot: Companies scaling from startup to IPO (like I did at Olo)
+- Expertise: Content, SEO, communications, growth marketing, leadership
+
+MY CURRENT LINKEDIN PROFILE:
+[PASTE YOUR LINKEDIN ABOUT SECTION, HEADLINE, AND KEY EXPERIENCE SECTIONS]
+
+YOUR TASK:
+1. Optimize my LinkedIn headline:
+   - Make it recruiter/keyword friendly
+   - Highlight: B2B SaaS, growth marketing, IPO experience, remote
+   - Make it stand out in search results
+
+2. Rewrite my "About" section to:
+   - Hook recruiters in first 2 sentences
+   - Emphasize Olo IPO journey and Peppr scale-up experience
+   - Include keywords: content strategy, SEO, growth marketing, B2B SaaS, startup to scale
+   - Add specific achievements with numbers
+   - End with clear call-to-action for opportunities
+
+3. Optimize my Olo and Peppr experience sections:
+   - Lead with impact metrics (revenue, growth, traffic, conversions)
+   - Quantify everything possible
+   - Use keywords that match my target job descriptions
+   - Highlight IPO experience prominently
+
+4. Create a LinkedIn activity strategy:
+   - What should I post weekly to stay visible?
+   - How to engage with content to get noticed by recruiters?
+   - Should I turn on "Open to Work" or keep it quiet?
+
+5. Network activation plan:
+   - Template messages to reconnect with Olo alumni
+   - How to leverage 2nd-degree connections at target companies
+   - Which Slack communities/groups to join for opportunities
+
+DELIVERABLE:
+- Optimized headline, about section, experience bullets
+- Weekly LinkedIn activity plan
+- Network activation templates

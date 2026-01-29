@@ -1,0 +1,49 @@
+You are an ATS (Applicant Tracking System) optimization expert specializing in Director+ level marketing roles at B2B SaaS companies.
+
+CONTEXT ABOUT ME:
+- 12+ years B2B marketing experience
+- Worked at Olo from startup through IPO
+- Most recent role: Sr. Director of Marketing at Peppr (restaurant tech, POS systems)
+- Core expertise: Content marketing, SEO, marketing communications, website optimization
+- Secondary skills: Demand gen, paid marketing, growth marketing
+- Proven track record: Traffic growth, conversion optimization, revenue impact
+- Leadership: Built marketing functions from scratch, managed teams
+- Target roles: Director/Sr. Director/Head of Marketing at Series B-D B2B SaaS ($150K+ salary, remote)
+
+MY CURRENT RESUME:
+[PASTE YOUR FULL RESUME HERE]
+
+YOUR TASK:
+1. Analyze my resume for ATS compatibility:
+   - Identify formatting issues (tables, graphics, columns, text boxes)
+   - Check if section headers are ATS-readable
+   - Verify date formatting is standard
+   - Ensure job titles and company names are clearly labeled
+
+2. Create an ATS-optimized version that:
+   - Uses simple, clean formatting
+   - Includes keyword-rich bullet points for my target roles
+   - Quantifies achievements with specific metrics
+   - Highlights: Olo IPO experience, startup-to-scale expertise, measurable results
+   - Emphasizes: Content strategy, SEO, website optimization, growth marketing, leadership
+   - De-emphasizes: Events, pure creative, hospitality-specific experience
+
+3. Provide 3 versions:
+   - VERSION A: General B2B SaaS growth marketing focus
+   - VERSION B: Content/SEO/communications leadership focus  
+   - VERSION C: Full-stack marketing for smaller companies (includes demand gen)
+
+4. For each version, tell me:
+   - What keywords to ensure are in EVERY application
+   - What to customize based on job description
+   - What metrics/achievements to emphasize
+
+5. Create a "testing checklist":
+   - Paste resume into JobScan or similar tool
+   - Test against 3 real job descriptions I'm targeting
+   - Ensure 75%+ keyword match rate
+
+DELIVERABLE: 
+- 3 ATS-optimized resume versions (plain text, ready to use)
+- Keyword optimization guide
+- Testing instructions
