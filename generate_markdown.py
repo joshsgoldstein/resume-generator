@@ -130,6 +130,30 @@ def generate_markdown(data: dict) -> str:
                 md.append(f"- **{title}**")
         md.append("\n---\n")
 
+    # Publications
+    if data.get('publications'):
+        md.append("## Publications\n")
+        for pub in data['publications']:
+            title = pub.get('title', 'Publication')
+            publication = pub.get('publication', '')
+            description = pub.get('description', '')
+            url = pub.get('url', '')
+
+            if url:
+                md.append(f"### [{title}]({url})")
+            else:
+                md.append(f"### {title}")
+
+            if publication:
+                md.append(f"**{publication}**\n")
+
+            if description:
+                md.append(f"{description}\n")
+
+            md.append("")  # Empty line between publications
+
+        md.append("---\n")
+
     # Education
     if data.get('education'):
         md.append("## Education\n")

@@ -101,6 +101,23 @@
             </section>
             {% endif %}
 
+            {% if publications %}
+            <section class="sidebar-section">
+                <h2 class="section-title">Publications</h2>
+                {% for pub in publications %}
+                <div class="speaking-item">
+                    <div class="speaking-title">{{ pub.title }}</div>
+                    {% if pub.publication %}
+                    <div class="speaking-event">{{ pub.publication }}</div>
+                    {% endif %}
+                    {% if pub.description %}
+                    <div class="edu-notes" style="margin-top: 4px;">{{ pub.description }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </section>
+            {% endif %}
+
             <!-- Education -->
             {% if education %}
             <section class="sidebar-section">
