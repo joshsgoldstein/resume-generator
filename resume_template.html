@@ -47,9 +47,9 @@
                 {% for job in experience %}
                 <div class="experience-item">
                     <div class="experience-header">
-                        <div class="experience-role-company">
+                        <h3 class="experience-role-company">
                             {{ job.role }} &mdash; {{ job.company }}
-                        </div>
+                        </h3>
                         <div class="experience-dates-location">
                             {{ job.start }} &ndash; {{ job.end }}{% if job.location %} · {{ job.location }}{% endif %}
                         </div>
