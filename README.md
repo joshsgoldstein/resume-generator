@@ -1,365 +1,539 @@
-# Resume Generator
+# 📄 Resume Generator
 
-A modern, flexible resume generator that creates beautiful HTML and PDF resumes from YAML or JSON data. Generates multiple output formats: a visually appealing version with modern CSS Grid layout, an ATS-optimized single-column version, and beautifully formatted Markdown.
+> A modern, production-ready resume generator that transforms YAML/JSON data into beautiful HTML, PDF, and Markdown formats. Built with Python, Jinja2, and Playwright, featuring automated GitHub Pages deployment and hot-reload development.
 
-## Features
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://joshsgoldstein.github.io/resume-generator/)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-- ✨ **Pure YAML/JSON** - Edit your resume in clean YAML or JSON format
-- 📄 **Multiple Outputs** - Generates visual PDF, ATS PDF, and beautiful Markdown
-- 🎨 **Modern Design** - Uses CSS Grid for professional two-column layout
-- 🖨️ **Perfect PDFs** - Uses Playwright (Chromium) for pixel-perfect PDF rendering
-- 🔄 **Bidirectional Conversion** - Convert between YAML and JSON formats
-- 🌐 **Landing Page** - Professional landing page with buttons for both resume versions
-- 🔥 **Hot Reload** - Development server with automatic regeneration on file changes
-- 🛠️ **Makefile Automation** - Simple commands for all common tasks
-- 🚀 **GitHub Pages Ready** - Automatic deployment via GitHub Actions
+---
 
-## Output Formats
+## 🎯 Overview
 
-### Visual Version (`resume.html` / `resume.pdf`)
-- Modern two-column layout with sidebar
-- CSS Grid for professional design
-- Perfect for networking, direct submissions, and portfolios
+This project demonstrates modern DevOps practices and full-stack development skills by implementing a sophisticated document generation pipeline. It showcases infrastructure-as-code principles, automated CI/CD workflows, and clean architecture patterns.
 
-### ATS Version (`resume_ats.html` / `resume_ats.pdf`)
-- Single-column layout optimized for Applicant Tracking Systems
-- Standard section headings and simple formatting
-- Parseable by automated hiring systems
+**Key Technical Achievements:**
+- 🏗️ Clean separation of data (YAML/JSON), templates (Jinja2), and styling (CSS)
+- 🚀 Automated deployment pipeline with GitHub Actions
+- 🔥 Hot-reload development environment with livereload
+- 📱 Responsive design with CSS Grid and Flexbox
+- 🎨 Professional PDF generation using Playwright's Chromium engine
+- 🔄 Bidirectional data transformation (YAML ↔ JSON)
 
-### Beautiful Markdown (`resume.md`)
-- Formatted markdown output for GitHub, LinkedIn, or sharing
-- Professional layout with emoji icons
-- Generated from YAML/JSON source
+---
 
-## Installation
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| **Multiple Output Formats** | Generate Visual PDF, ATS-optimized PDF, and GitHub-ready Markdown from a single source |
+| **Modern Tech Stack** | Python 3.11+, Jinja2 templating, Playwright PDF rendering, PyYAML parsing |
+| **Developer Experience** | Hot-reload dev server, Makefile automation, clear project structure |
+| **Production Ready** | GitHub Actions CI/CD, automated deployments, professional landing page |
+| **ATS Optimized** | Dedicated single-column layout for Applicant Tracking Systems |
+| **Flexible Data Sources** | Edit in YAML or JSON, with automatic bidirectional conversion |
+
+---
+
+## 🚀 Live Demo
+
+**[View Live Site →](https://joshsgoldstein.github.io/resume-generator/)**
+
+The live demo includes:
+- Professional landing page with resume version selector
+- Visual resume with modern CSS Grid two-column layout
+- ATS-optimized single-column version
+- Automatic regeneration on every push to main
+
+---
+
+## 📸 Screenshots
+
+### Landing Page
+Clean, professional landing page with version selection:
+- Gradient background design
+- Clear call-to-action buttons
+- Responsive mobile layout
+
+### Visual Resume
+Modern two-column layout featuring:
+- CSS Grid-based responsive design
+- Sidebar with skills and education
+- Professional typography and spacing
+- Chromium-rendered PDF for perfect fidelity
+
+### ATS Resume
+Single-column layout optimized for parsing:
+- Standard section headings
+- Linear content flow
+- No complex CSS that could break parsers
+- Plain-text friendly structure
+
+---
+
+## 🛠️ Technology Stack
+
+### Core Technologies
+- **Python 3.11+** - Core scripting and data processing
+- **Jinja2** - Powerful HTML templating engine
+- **Playwright** - Chromium-based PDF generation with full CSS support
+- **PyYAML** - YAML parsing and serialization
+- **livereload** - Development server with hot reload
+
+### DevOps & Infrastructure
+- **GitHub Actions** - Automated CI/CD pipeline
+- **GitHub Pages** - Static site hosting
+- **Make** - Build automation and task orchestration
+
+### Design & Styling
+- **CSS Grid** - Modern two-column layout system
+- **CSS Flexbox** - Responsive component layouts
+- **Custom CSS** - Professional styling with print optimization
+
+---
+
+## 📦 Installation
+
+### Prerequisites
+- Python 3.11 or higher
+- pip (Python package manager)
+- Git
 
 ### Quick Start
+
 ```bash
+# Clone the repository
+git clone https://github.com/joshsgoldstein/resume-generator.git
+cd resume-generator
+
+# Install dependencies
 make install
+
+# Generate all outputs
+make all
+
+# Start development server with hot reload
+make watch
 ```
 
-This will install:
-- Python packages: `jinja2`, `playwright`, `pyyaml`, `livereload`
-- Playwright Chromium browser
-
 ### Manual Installation
+
 ```bash
+# Install Python packages
 pip install -r requirements.txt
+
+# Install Playwright browsers
 playwright install chromium
 ```
 
-## Usage
+---
+
+## 💻 Usage
 
 ### Quick Commands
 
+| Command | Description |
+|---------|-------------|
+| `make install` | Install all dependencies and Playwright browsers |
+| `make all` | Generate HTML, PDF, and Markdown outputs |
+| `make generate` | Generate HTML and PDF resumes only |
+| `make generate-md` | Generate beautiful Markdown resume |
+| `make watch` | Start hot-reload dev server (recommended for development) |
+| `make serve` | Start basic HTTP server for preview |
+| `make yaml2json` | Convert resume.yaml → resume.json |
+| `make json2yaml` | Convert resume.json → resume.yaml |
+| `make clean` | Remove all generated files |
+
+### Development Workflow
+
+**Option 1: Hot Reload (Recommended)**
 ```bash
-# Generate all outputs (PDFs + Markdown)
-make all
-
-# Convert YAML to JSON
-make yaml2json
-
-# Convert JSON to YAML
-make json2yaml
-
-# Generate HTML and PDF resumes
-make generate
-
-# Generate beautiful markdown
-make generate-md
-
-# Start HTTP server to preview
-make serve
-
-# Hot reload development server (auto-regenerates)
+# Start development server
 make watch
 
-# Clean generated files
-make clean
+# Edit resume.yaml
+# Browser automatically refreshes on save
+# View at http://localhost:8000
 ```
 
-### File Structure
+**Option 2: Manual Generation**
+```bash
+# Edit resume.yaml
+vim resume.yaml
 
-```
-resume-generator/
-├── resume.yaml                 # Source: Pure YAML (edit this!)
-├── resume.json                 # Source: Pure JSON (alternative)
-├── resume.md                   # Generated: Beautiful markdown
-├── resume.html / resume.pdf    # Generated: Visual version
-├── resume_ats.html / resume_ats.pdf  # Generated: ATS version
-├── index.html                  # Landing page with buttons
-├── resume_template.html        # Visual template
-├── resume_template_ats.html    # ATS template
-├── resume_style.css            # Visual stylesheet
-├── resume_style_ats.css        # ATS stylesheet
-├── generate_resume.py          # Main generator (HTML/PDF)
-├── generate_markdown.py        # Markdown generator
-├── yaml_to_json.py             # YAML → JSON converter
-├── json_to_yaml.py             # JSON → YAML converter
-├── watch.py                    # Hot reload dev server
-├── Makefile                    # Automation commands
-└── .github/workflows/deploy.yml  # GitHub Pages deployment
+# Generate all outputs
+make all
+
+# Preview in browser
+make serve
 ```
 
 ### Editing Your Resume
 
-You can edit your resume in either format:
-
-**Option 1: Edit YAML** (Recommended)
-```bash
-# 1. Edit resume.yaml
-# 2. Generate all outputs
-make all
-```
-
-**Option 2: Edit JSON**
-```bash
-# 1. Edit resume.json
-# 2. Generate all outputs
-make all
-
-# Optional: Sync back to YAML
-make json2yaml
-```
-
-**Option 3: Use Hot Reload** (Development)
-```bash
-# Watches for changes and auto-regenerates
-make watch
-# Opens http://localhost:8000 with live reload
-```
-
-### Workflow Examples
-
-**After updating your resume:**
-```bash
-make all                    # Generate PDFs + Markdown
-```
-
-**Preview in browser:**
-```bash
-make serve                  # Opens http://localhost:8000
-# View: http://localhost:8000/             → Landing page
-#       http://localhost:8000/resume.html  → Visual version
-#       http://localhost:8000/resume_ats.html → ATS version
-```
-
-**Development with hot reload:**
-```bash
-make watch                  # Auto-regenerates on file changes
-# Edit resume.yaml and see changes instantly!
-```
-
-**Fresh start on new machine:**
-```bash
-make install               # Install dependencies
-make all                   # Generate everything
-```
-
-**Deploy to GitHub Pages:**
-```bash
-# Push to main branch - GitHub Actions handles the rest!
-git add resume.yaml
-git commit -m "Update resume"
-git push origin main
-```
-
-## Resume Sections
-
-Your resume supports the following sections:
-
-- **Name & Tagline** - Your name and professional title
-- **Contact Info** - Address, phone, email, LinkedIn, GitHub, website
-- **Summary** - Professional summary/objective (multi-line string)
-- **Technical Skills** - Array of technical competencies
-- **Soft Skills** - Array of core competencies
-- **Experience** - Work history with role, company, dates, bullets
-- **Speaking Engagements** - Conference talks and presentations
-- **Publications** - Articles, newsletters, papers, books
-- **Education** - Degrees, schools, dates, notes
-
-## YAML Format
+Your resume data lives in `resume.yaml` (or `resume.json`):
 
 ```yaml
 name: Your Name
 tagline: Your Professional Title
 
 summary: >
-  Your professional summary goes here. Use the > symbol for multi-line
-  strings that will be folded into a single paragraph. This makes it
-  easy to write long summaries without worrying about line breaks.
+  Multi-line professional summary using YAML's fold operator.
+  This gets rendered as a single paragraph in all output formats.
 
 contact:
-  address: Your Address
-  phone: 555-555-5555
   email: you@example.com
-  website: https://yoursite.com
+  phone: 555-555-5555
   linkedin: https://linkedin.com/in/yourprofile
   github: https://github.com/yourusername
 
 technical_skills:
 - Skill 1
 - Skill 2
-- Skill 3
-
-soft_skills:
-- Leadership
-- Communication
-- Problem Solving
-
-publications:
-- title: 'Your Article or Newsletter Title'
-  publication: Publication Name (e.g., Medium, Substack)
-  description: Brief description of the publication and its reach or impact.
-  url: https://yourpublication.com
-
-speaking_engagements:
-- title: Talk Title
-  event: Conference Name - Month Year
 
 experience:
   - role: Senior Engineer
     company: Company Name
-    location: City, State
     start: Jan 2020
     end: Present
     bullets:
-    - Bullet point 1
-    - Bullet point 2
-
-education:
-- degree: Bachelor of Science
-  school: University Name
-  location: City, State
-  start: Aug 2015
-  end: May 2019
-  notes: Optional additional info
+    - Achievement with quantifiable impact
+    - Technical leadership example
 ```
 
-## Technology Stack
+---
 
-- **Python** - Core scripting language
-- **Jinja2** - HTML templating
-- **Playwright** - PDF generation (Chromium-based)
-- **PyYAML** - YAML parsing
-- **CSS Grid** - Modern layout (visual version)
-- **Make** - Build automation
+## 📁 Project Structure
 
-## Why Playwright?
+```
+resume-generator/
+├── 📝 Source Files (Edit These)
+│   ├── resume.yaml              # Resume data (YAML format)
+│   ├── resume.json              # Resume data (JSON format - alternative)
+│   ├── resume_template.html     # Visual resume template
+│   ├── resume_template_ats.html # ATS resume template
+│   ├── resume_style.css         # Visual resume styling
+│   └── resume_style_ats.css     # ATS resume styling
+│
+├── 🤖 Generation Scripts
+│   ├── generate_resume.py       # Main generator (HTML + PDF)
+│   ├── generate_markdown.py     # Markdown generator
+│   ├── yaml_to_json.py          # YAML → JSON converter
+│   ├── json_to_yaml.py          # JSON → YAML converter
+│   └── watch.py                 # Hot reload development server
+│
+├── 🚀 Generated Files (Git Ignored)
+│   ├── resume.html              # Visual HTML output
+│   ├── resume.pdf               # Visual PDF output
+│   ├── resume_ats.html          # ATS HTML output
+│   ├── resume_ats.pdf           # ATS PDF output
+│   └── resume.md                # Markdown output
+│
+├── 🌐 Deployment
+│   ├── index.html               # Landing page
+│   └── .github/workflows/
+│       └── deploy.yml           # GitHub Actions workflow
+│
+└── 📋 Configuration
+    ├── Makefile                 # Build automation
+    ├── requirements.txt         # Python dependencies
+    └── .gitignore               # Git ignore rules
+```
 
-Playwright uses Chromium (the same engine as Chrome) for PDF generation, which means:
-- ✅ Full CSS Grid and Flexbox support
-- ✅ Modern CSS features work perfectly
-- ✅ Pixel-perfect rendering matching browser output
-- ✅ Professional-quality PDFs
+---
 
-Previous versions used WeasyPrint, which had limited CSS support and caused layout issues.
+## 🎨 Customization
 
-## ATS Optimization
+### Styling
 
-The ATS version is specifically designed to pass through Applicant Tracking Systems:
-- Single-column layout (no complex multi-column designs)
-- Standard section headings
-- Simple, parseable formatting
-- No complex CSS that could confuse parsers
-- Skills in comma-separated format
-
-## Customization
-
-### Adjust Spacing
-Edit `resume_style.css`:
+**Adjust spacing and typography:**
 ```css
+/* resume_style.css */
 @page {
-    margin: 12mm;  /* Adjust page margins */
+    margin: 10mm;  /* Page margins */
 }
 
 body {
-    font-size: 10pt;      /* Adjust base font size */
-    line-height: 1.3;     /* Adjust line spacing */
+    font-size: 9pt;      /* Base font size */
+    line-height: 1.2;    /* Line height for compact layout */
 }
 ```
 
-### Change Layout
-Edit `resume_template.html` to:
-- Reorder sections
-- Change column widths (currently 68% / 32%)
-- Modify section styling
+**Change color scheme:**
+```css
+/* Visual resume colors */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
 
-### Add New Sections
-1. Add data to `resume.yaml` or `resume.json`
-2. Update templates: `resume_template.html` and `resume_template_ats.html`
-3. Update `generate_markdown.py` if the section should appear in markdown
-4. Add CSS styling in `resume_style.css` and `resume_style_ats.css` if needed
-5. Run `make all` to generate all outputs
+/* Landing page gradient */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+```
 
-## Tips
+### Layout
 
-- Keep bullet points concise (1-2 lines each)
-- Use action verbs to start bullet points
-- Quantify achievements when possible
-- Quote strings with colons in YAML (e.g., `"Title: Subtitle"`)
-- Test ATS version by copying text from PDF to verify parseability
-- Use `make serve` to preview before generating final PDFs
+**Modify sidebar width:**
+```css
+/* resume_style.css */
+.layout {
+    grid-template-columns: 68% 32%;  /* Main / Sidebar ratio */
+}
+```
 
-## GitHub Pages Deployment
+**Reorder sections:**
+Edit `resume_template.html` to change section order in the sidebar or main content area.
 
-This project includes a GitHub Actions workflow that automatically generates and deploys your resume to GitHub Pages.
+### Adding New Sections
 
-### Setup
+1. **Add data to `resume.yaml`:**
+```yaml
+certifications:
+- name: AWS Solutions Architect
+  year: 2024
+```
 
-1. **Enable GitHub Pages in repo settings:**
-   - Go to Settings → Pages
-   - Under "Source", select **GitHub Actions**
+2. **Update template (`resume_template.html`):**
+```html
+{% if certifications %}
+<section class="sidebar-section">
+    <h2 class="section-title">Certifications</h2>
+    {% for cert in certifications %}
+    <div>{{ cert.name }} ({{ cert.year }})</div>
+    {% endfor %}
+</section>
+{% endif %}
+```
+
+3. **Add CSS styling if needed**
+4. **Update `generate_markdown.py` for markdown output**
+5. **Run `make all` to generate**
+
+---
+
+## 📝 Supported Resume Sections
+
+| Section | Description | Format |
+|---------|-------------|--------|
+| **Name & Tagline** | Professional identity | String values |
+| **Contact Info** | Address, phone, email, social links | Nested object |
+| **Summary** | Professional objective | Multi-line string (`>` operator) |
+| **Technical Skills** | Technical competencies | Array of strings |
+| **Soft Skills** | Core competencies | Array of strings |
+| **Publications** | Articles, newsletters, books | Array of objects |
+| **Speaking Engagements** | Conference talks | Array of objects |
+| **Experience** | Work history | Array of job objects with bullets |
+| **Education** | Academic background | Array of degree objects |
+
+---
+
+## 🚀 GitHub Pages Deployment
+
+### Setup (One Time)
+
+1. **Enable GitHub Pages:**
+   ```
+   Repository Settings → Pages → Source: GitHub Actions
+   ```
 
 2. **Push to main branch:**
    ```bash
    git push origin main
    ```
 
-3. **View your live resume:**
-   - Landing page: `https://yourusername.github.io/resume-generator/`
-   - Visual resume: `https://yourusername.github.io/resume-generator/resume.html`
-   - ATS resume: `https://yourusername.github.io/resume-generator/resume_ats.html`
+3. **Access your live site:**
+   ```
+   https://yourusername.github.io/resume-generator/
+   ```
 
-The workflow automatically:
-- Installs Python dependencies
-- Runs Playwright to generate PDFs
-- Copies CSS and HTML files
-- Deploys to GitHub Pages
+### Automated Deployment Pipeline
+
+The included GitHub Actions workflow automatically:
+1. ✅ Installs Python dependencies
+2. ✅ Installs Playwright Chromium browser
+3. ✅ Generates HTML and PDF files
+4. ✅ Copies assets (CSS, landing page)
+5. ✅ Deploys to GitHub Pages
+
+**Deployment triggers:**
+- Every push to `main` branch
+- Manual trigger via Actions tab
+
+**Deployment time:** ~2-3 minutes
 
 ### Updating Your Live Resume
 
-Simply edit `resume.yaml` and push to main:
 ```bash
+# Edit your resume
+vim resume.yaml
+
+# Commit and push
 git add resume.yaml
-git commit -m "Update resume"
+git commit -m "Update resume content"
 git push origin main
+
+# GitHub Actions automatically rebuilds and deploys
 ```
 
-GitHub Actions will automatically regenerate and redeploy within 2-3 minutes.
+---
 
-## Troubleshooting
+## 🏗️ Architecture
+
+### Data Flow
+
+```
+resume.yaml (source)
+    ↓
+yaml_to_json.py
+    ↓
+resume.json (intermediate)
+    ↓
+generate_resume.py + Jinja2 templates
+    ↓
+resume.html (with CSS)
+    ↓
+Playwright + Chromium
+    ↓
+resume.pdf (final output)
+```
+
+### Design Principles
+
+1. **Separation of Concerns**
+   - Data layer (YAML/JSON)
+   - Template layer (Jinja2 HTML)
+   - Presentation layer (CSS)
+   - Generation layer (Python scripts)
+
+2. **Single Source of Truth**
+   - All resume data in one YAML/JSON file
+   - Templates pull from data only
+   - No hardcoded content in templates
+
+3. **Output Format Flexibility**
+   - Same data → multiple outputs
+   - Easy to add new formats (LinkedIn, plain text, etc.)
+
+4. **Developer Experience**
+   - Hot reload for instant feedback
+   - Clear error messages
+   - Simple Makefile commands
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues
 
 **YAML parsing errors:**
-- Check indentation (use spaces, not tabs)
-- Quote strings containing colons or special characters
-- Ensure proper list formatting with `-` prefix
+```bash
+# Check indentation (spaces, not tabs)
+# Quote strings with special characters
+# Verify list formatting with `-` prefix
 
-**PDF doesn't match HTML:**
-- Ensure Playwright is installed: `playwright install chromium`
-- Check that CSS file paths are correct
-- Regenerate with `make generate`
+# Example:
+title: "Title: Subtitle"  # Correct (quoted)
+title: Title: Subtitle    # Error (unquoted colon)
+```
 
-**Content too long:**
-- Reduce margins in CSS (12mm → 10mm)
-- Decrease font size (10pt → 9pt)
-- Tighten line height (1.3 → 1.2)
-- Remove older/less relevant experience
+**PDF generation fails:**
+```bash
+# Reinstall Playwright browsers
+playwright install chromium --force
+```
 
-## License
+**CSS not loading on GitHub Pages:**
+- Verify `_site` directory includes CSS files
+- Check deploy.yml includes CSS copy step
+- Clear browser cache
 
-MIT License - Feel free to use and modify for your own resume!
+**Content doesn't fit on page:**
+```css
+/* Adjust in resume_style.css */
+@page { margin: 8mm; }      /* Reduce margins */
+body { font-size: 8.5pt; }  /* Smaller font */
+```
 
-## Contributing
+**Hot reload not working:**
+```bash
+# Check if livereload is installed
+pip install livereload
 
-This is a personal resume generator, but feel free to fork and adapt for your needs!
+# Verify port 8000 is available
+lsof -i :8000  # Kill any conflicting process
+```
+
+---
+
+## 📊 Technical Highlights
+
+### Why Playwright for PDF Generation?
+
+| Feature | Playwright | WeasyPrint |
+|---------|-----------|------------|
+| CSS Grid Support | ✅ Full | ❌ Limited |
+| Modern CSS | ✅ All features | ⚠️ Partial |
+| Rendering Accuracy | ✅ Pixel-perfect | ⚠️ Approximate |
+| Font Support | ✅ System fonts | ⚠️ Requires embedding |
+| Maintenance | ✅ Active (Microsoft) | ⚠️ Community |
+
+### Performance Optimization
+
+- **Lazy browser initialization** - Only when generating PDFs
+- **Concurrent generation** - Visual and ATS versions in sequence
+- **Asset optimization** - Minimal CSS with no external dependencies
+- **Caching strategy** - GitHub Pages serves static assets with caching headers
+
+### Code Quality
+
+- **Type hints** where beneficial for readability
+- **Error handling** with informative messages
+- **Modular design** - Each script has single responsibility
+- **Documentation** - Inline comments for complex logic
+
+---
+
+## 🤝 Contributing
+
+While this is a personal resume generator, contributions are welcome! Feel free to:
+
+- 🐛 Report bugs via GitHub Issues
+- 💡 Suggest features or improvements
+- 🔧 Submit pull requests
+- ⭐ Star the repo if you find it useful
+
+---
+
+## 📄 License
+
+**MIT License** - Feel free to use, modify, and distribute for your own resume.
+
+See [LICENSE](LICENSE) file for full details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Jinja2** - Powerful and flexible templating
+- **Playwright** - Reliable browser automation and PDF generation
+- **GitHub Pages** - Free hosting for static sites
+- **GitHub Actions** - Seamless CI/CD integration
+
+---
+
+## 📧 Contact
+
+**Josh Goldstein**
+- 🌐 Website: [joshsgoldstein.github.io/resume-generator](https://joshsgoldstein.github.io/resume-generator/)
+- 💼 LinkedIn: [linkedin.com/in/joshsgoldstein](https://linkedin.com/in/joshsgoldstein)
+- 🐙 GitHub: [@joshsgoldstein](https://github.com/joshsgoldstein)
+
+---
+
+<div align="center">
+
+Made with ❤️ by Josh Goldstein
+
+**[View Live Demo](https://joshsgoldstein.github.io/resume-generator/)** | **[Report Bug](https://github.com/joshsgoldstein/resume-generator/issues)** | **[Request Feature](https://github.com/joshsgoldstein/resume-generator/issues)**
+
+</div>
