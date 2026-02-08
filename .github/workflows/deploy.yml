@@ -38,6 +38,7 @@ jobs:
         run: |
           mkdir -p _site
           cp resume.html resume_ats.html _site/
+          cp resume.pdf resume_ats.pdf _site/
           cp resume_style.css resume_style_ats.css _site/
           cp index.html _site/ 2>/dev/null || echo "No index.html yet"
 

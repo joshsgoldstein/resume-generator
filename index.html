@@ -95,6 +95,25 @@
             flex-direction: column;
         }
 
+        .btn-download {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 0.9em;
+            text-decoration: none;
+            color: #667eea;
+            background: white;
+            border: 1px solid #667eea;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-download:hover {
+            background: #f8f9ff;
+            transform: translateY(-1px);
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 40px 30px;
@@ -121,6 +140,7 @@
                     View Visual Resume
                 </a>
                 <p class="description">Modern two-column layout with CSS Grid</p>
+                <a href="resume.pdf" class="btn-download" download>⬇️ Download PDF</a>
             </div>
 
             <div class="btn-wrapper">
@@ -128,6 +148,7 @@
                     View ATS-Optimized Resume
                 </a>
                 <p class="description">Single-column format for applicant tracking systems</p>
+                <a href="resume_ats.pdf" class="btn-download" download>⬇️ Download PDF</a>
             </div>
         </div>
     </div>

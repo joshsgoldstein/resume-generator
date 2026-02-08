@@ -83,6 +83,10 @@ h2.section-title {
 
 .experience-role-company {
     max-width: 70%;
+    font-size: 10pt;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
 }
 
 .experience-dates-location {
