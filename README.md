@@ -1,15 +1,18 @@
 # Resume Generator
 
-A modern, flexible resume generator that creates beautiful HTML and PDF resumes from YAML frontmatter Markdown or JSON data. Generates both a visually appealing version with modern CSS Grid layout and an ATS-optimized single-column version.
+A modern, flexible resume generator that creates beautiful HTML and PDF resumes from YAML or JSON data. Generates multiple output formats: a visually appealing version with modern CSS Grid layout, an ATS-optimized single-column version, and beautifully formatted Markdown.
 
 ## Features
 
-- ✨ **YAML Frontmatter Markdown** - Edit your resume in human-friendly Markdown format
-- 📄 **Dual Output** - Generates both visual and ATS-optimized versions
+- ✨ **Pure YAML/JSON** - Edit your resume in clean YAML or JSON format
+- 📄 **Multiple Outputs** - Generates visual PDF, ATS PDF, and beautiful Markdown
 - 🎨 **Modern Design** - Uses CSS Grid for professional two-column layout
 - 🖨️ **Perfect PDFs** - Uses Playwright (Chromium) for pixel-perfect PDF rendering
-- 🔄 **Bidirectional Conversion** - Convert between Markdown and JSON formats
+- 🔄 **Bidirectional Conversion** - Convert between YAML and JSON formats
+- 🌐 **Landing Page** - Professional landing page with buttons for both resume versions
+- 🔥 **Hot Reload** - Development server with automatic regeneration on file changes
 - 🛠️ **Makefile Automation** - Simple commands for all common tasks
+- 🚀 **GitHub Pages Ready** - Automatic deployment via GitHub Actions
 
 ## Output Formats
 
@@ -23,6 +26,11 @@ A modern, flexible resume generator that creates beautiful HTML and PDF resumes 
 - Standard section headings and simple formatting
 - Parseable by automated hiring systems
 
+### Beautiful Markdown (`resume.md`)
+- Formatted markdown output for GitHub, LinkedIn, or sharing
+- Professional layout with emoji icons
+- Generated from YAML/JSON source
+
 ## Installation
 
 ### Quick Start
@@ -31,12 +39,12 @@ make install
 ```
 
 This will install:
-- Python packages: `jinja2`, `playwright`, `pyyaml`
+- Python packages: `jinja2`, `playwright`, `pyyaml`, `livereload`
 - Playwright Chromium browser
 
 ### Manual Installation
 ```bash
-pip install jinja2 playwright pyyaml
+pip install -r requirements.txt
 playwright install chromium
 ```
 
@@ -45,20 +53,26 @@ playwright install chromium
 ### Quick Commands
 
 ```bash
-# Generate both resume versions (from resume.md)
+# Generate all outputs (PDFs + Markdown)
 make all
 
-# Convert Markdown to JSON
-make md2json
+# Convert YAML to JSON
+make yaml2json
 
-# Convert JSON to Markdown
-make json2md
+# Convert JSON to YAML
+make json2yaml
 
 # Generate HTML and PDF resumes
 make generate
 
+# Generate beautiful markdown
+make generate-md
+
 # Start HTTP server to preview
 make serve
+
+# Hot reload development server (auto-regenerates)
+make watch
 
 # Clean generated files
 make clean
@@ -67,52 +81,73 @@ make clean
 ### File Structure
 
 ```
-resume/
-├── resume.md                    # Source: YAML frontmatter Markdown
-├── resume_data.json            # Source: JSON format
+resume-generator/
+├── resume.yaml                 # Source: Pure YAML (edit this!)
+├── resume.json                 # Source: Pure JSON (alternative)
+├── resume.md                   # Generated: Beautiful markdown
+├── resume.html / resume.pdf    # Generated: Visual version
+├── resume_ats.html / resume_ats.pdf  # Generated: ATS version
+├── index.html                  # Landing page with buttons
 ├── resume_template.html        # Visual template
 ├── resume_template_ats.html    # ATS template
 ├── resume_style.css            # Visual stylesheet
 ├── resume_style_ats.css        # ATS stylesheet
-├── generate_resume.py          # Main generator script
-├── markdown_to_json.py         # MD → JSON converter
-├── json_to_markdown.py         # JSON → MD converter
-└── Makefile                    # Automation commands
+├── generate_resume.py          # Main generator (HTML/PDF)
+├── generate_markdown.py        # Markdown generator
+├── yaml_to_json.py             # YAML → JSON converter
+├── json_to_yaml.py             # JSON → YAML converter
+├── watch.py                    # Hot reload dev server
+├── Makefile                    # Automation commands
+└── .github/workflows/deploy.yml  # GitHub Pages deployment
 ```
 
 ### Editing Your Resume
 
 You can edit your resume in either format:
 
-**Option 1: Edit Markdown** (Recommended)
+**Option 1: Edit YAML** (Recommended)
 ```bash
-# 1. Edit resume.md
-# 2. Generate resumes
+# 1. Edit resume.yaml
+# 2. Generate all outputs
 make all
 ```
 
 **Option 2: Edit JSON**
 ```bash
-# 1. Edit resume_data.json
-# 2. Generate resumes
-make generate
+# 1. Edit resume.json
+# 2. Generate all outputs
+make all
 
-# Optional: Sync back to Markdown
-make json2md
+# Optional: Sync back to YAML
+make json2yaml
+```
+
+**Option 3: Use Hot Reload** (Development)
+```bash
+# Watches for changes and auto-regenerates
+make watch
+# Opens http://localhost:8000 with live reload
 ```
 
 ### Workflow Examples
 
 **After updating your resume:**
 ```bash
-make all                    # Convert MD → JSON → Generate PDFs
+make all                    # Generate PDFs + Markdown
 ```
 
 **Preview in browser:**
 ```bash
 make serve                  # Opens http://localhost:8000
-# View: http://localhost:8000/resume.html
-#       http://localhost:8000/resume_ats.html
+# View: http://localhost:8000/             → Landing page
+#       http://localhost:8000/resume.html  → Visual version
+#       http://localhost:8000/resume_ats.html → ATS version
+```
+
+**Development with hot reload:**
+```bash
+make watch                  # Auto-regenerates on file changes
+# Edit resume.yaml and see changes instantly!
 ```
 
 **Fresh start on new machine:**
@@ -121,42 +156,66 @@ make install               # Install dependencies
 make all                   # Generate everything
 ```
 
+**Deploy to GitHub Pages:**
+```bash
+# Push to main branch - GitHub Actions handles the rest!
+git add resume.yaml
+git commit -m "Update resume"
+git push origin main
+```
+
 ## Resume Sections
 
 Your resume supports the following sections:
 
 - **Name & Tagline** - Your name and professional title
 - **Contact Info** - Address, phone, email, LinkedIn, GitHub, website
-- **Summary** - Professional summary/objective
-- **Technical Skills** - Comma-separated technical competencies
-- **Soft Skills** - Comma-separated core competencies
+- **Summary** - Professional summary/objective (multi-line string)
+- **Technical Skills** - Array of technical competencies
+- **Soft Skills** - Array of core competencies
 - **Experience** - Work history with role, company, dates, bullets
 - **Speaking Engagements** - Conference talks and presentations
+- **Publications** - Articles, newsletters, papers, books
 - **Education** - Degrees, schools, dates, notes
 
-## YAML Frontmatter Format
+## YAML Format
 
-```markdown
----
+```yaml
 name: Your Name
 tagline: Your Professional Title
+
+summary: >
+  Your professional summary goes here. Use the > symbol for multi-line
+  strings that will be folded into a single paragraph. This makes it
+  easy to write long summaries without worrying about line breaks.
 
 contact:
   address: Your Address
   phone: 555-555-5555
   email: you@example.com
+  website: https://yoursite.com
   linkedin: https://linkedin.com/in/yourprofile
   github: https://github.com/yourusername
 
 technical_skills:
-  - Skill 1
-  - Skill 2
-  - Skill 3
+- Skill 1
+- Skill 2
+- Skill 3
 
 soft_skills:
-  - Leadership
-  - Communication
-  - Problem Solving
+- Leadership
+- Communication
+- Problem Solving
+
+publications:
+- title: 'Your Article or Newsletter Title'
+  publication: Publication Name (e.g., Medium, Substack)
+  description: Brief description of the publication and its reach or impact.
+  url: https://yourpublication.com
+
+speaking_engagements:
+- title: Talk Title
+  event: Conference Name - Month Year
 
 experience:
   - role: Senior Engineer
@@ -165,21 +224,16 @@ experience:
     start: Jan 2020
     end: Present
     bullets:
-      - Bullet point 1
-      - Bullet point 2
+    - Bullet point 1
+    - Bullet point 2
 
 education:
-  - degree: Bachelor of Science
-    school: University Name
-    location: City, State
-    start: Aug 2015
-    end: May 2019
-    notes: Optional additional info
----
-
-## Summary
-
-Your professional summary goes here.
+- degree: Bachelor of Science
+  school: University Name
+  location: City, State
+  start: Aug 2015
+  end: May 2019
+  notes: Optional additional info
 ```
 
 ## Technology Stack
@@ -232,9 +286,11 @@ Edit `resume_template.html` to:
 - Modify section styling
 
 ### Add New Sections
-1. Add data to `resume.md` or `resume_data.json`
-2. Update `resume_template.html` with new section
-3. Add CSS styling in `resume_style.css`
+1. Add data to `resume.yaml` or `resume.json`
+2. Update templates: `resume_template.html` and `resume_template_ats.html`
+3. Update `generate_markdown.py` if the section should appear in markdown
+4. Add CSS styling in `resume_style.css` and `resume_style_ats.css` if needed
+5. Run `make all` to generate all outputs
 
 ## Tips
 
@@ -244,6 +300,43 @@ Edit `resume_template.html` to:
 - Quote strings with colons in YAML (e.g., `"Title: Subtitle"`)
 - Test ATS version by copying text from PDF to verify parseability
 - Use `make serve` to preview before generating final PDFs
+
+## GitHub Pages Deployment
+
+This project includes a GitHub Actions workflow that automatically generates and deploys your resume to GitHub Pages.
+
+### Setup
+
+1. **Enable GitHub Pages in repo settings:**
+   - Go to Settings → Pages
+   - Under "Source", select **GitHub Actions**
+
+2. **Push to main branch:**
+   ```bash
+   git push origin main
+   ```
+
+3. **View your live resume:**
+   - Landing page: `https://yourusername.github.io/resume-generator/`
+   - Visual resume: `https://yourusername.github.io/resume-generator/resume.html`
+   - ATS resume: `https://yourusername.github.io/resume-generator/resume_ats.html`
+
+The workflow automatically:
+- Installs Python dependencies
+- Runs Playwright to generate PDFs
+- Copies CSS and HTML files
+- Deploys to GitHub Pages
+
+### Updating Your Live Resume
+
+Simply edit `resume.yaml` and push to main:
+```bash
+git add resume.yaml
+git commit -m "Update resume"
+git push origin main
+```
+
+GitHub Actions will automatically regenerate and redeploy within 2-3 minutes.
 
 ## Troubleshooting
 
