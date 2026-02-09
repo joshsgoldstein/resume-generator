@@ -74,8 +74,8 @@ experience:
     end: Present
     bullets:
     - Serving as field CTO advisor to AI governance platform company, defining product positioning and messaging, building technical demos, and creating customer-facing content to accelerate enterprise adoption and communicate complex AI safety concepts to diverse stakeholders.
-    - Advising CTO of digital rights technology company on generative AI architecture and implementation, designing and building AI-powered solutions while enabling co-founders on emerging GenAI technologies and integration patterns.
-    - Consulting with beverage industry technology company on AI/ML integration strategy, architecting generative AI solutions and providing technical enablement to leadership team on LLM capabilities and deployment approaches.
+    - Advising in the role of CTO for a digital rights technology company on generative AI architecture and implementation, designing and building AI-powered solutions while enabling co-founders on emerging GenAI technologies and integration patterns.
+    - Consulting with beverage industry technology company on AI/ML integration strategy, architecting generative AI solutions and providing technical enablement to leadership team on LLM capabilities and software development.
 
   - role: Customer Excellence Solutions Engineer
     company: Weaviate
@@ -84,7 +84,7 @@ experience:
     end: Oct 2025
     bullets:
     - Served as primary technical advisor to Fortune 50 and enterprise customers, architecting LLM-powered agentic applications and semantic search solutions integrating RAG frameworks, multimodal retrieval, and generative AI pipelines from proof-of-concept through production deployment, including developing evaluation frameworks to measure performance for specific use cases.
-    - Partnered cross-functionally to strengthen enterprise positioning through product feedback loops, created technical enablement content (Jupyter notebooks, tutorials, eBooks on LLM deployment patterns and RAG architectures), and delivered conference presentations on agentic AI capabilities and emerging generative AI integration patterns.
+    - Partnered cross-functionally to strengthen enterprise positioning through product feedback loops, created technical enablement content (Jupyter notebooks, tutorials, LLM deployment patterns and RAG architectures deep dives), and delivered conference presentations on agentic AI capabilities and emerging generative AI integration patterns.
     - Established standardized POC framework and product feedback processes to accelerate enterprise delivery and adoption, while mentoring new Solutions Engineers on customer engagement best practices and technical architecture patterns.
     - Contributed to defining Weaviate's on-premises enterprise offering, enabling centralized data platform teams at Fortune 50 companies to develop production generative AI applications on secure, self-managed infrastructure with focus on safety and reliability.
 
@@ -117,7 +117,7 @@ experience:
     start: Dec 2020
     end: Jan 2020
     bullets:
-    - Led independent consultancy delivering technical architecture and go-to-market strategy for emerging search technology companies
+    - Independent consultant delivering technical architecture and go-to-market strategy for emerging technology companies
     - "Project 1: Defined ideal customer profile (ICP), built outreach programs, and guided product enhancements for e-commerce search platform's US market entry"
     - "Project 2: Designed and architected job search system for stealth career search platform, defining technical requirements and implementation roadmap"
 
