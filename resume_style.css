@@ -8,6 +8,9 @@ body {
     color: #222;
     line-height: 1.2;
     font-size: 9pt;
+    padding: 15px;
+    max-width: 210mm;
+    margin: 0 auto;
 }
 
 * {
