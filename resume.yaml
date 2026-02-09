@@ -1,14 +1,17 @@
 name: Josh Goldstein
-tagline: Solutions Architect | Enterprise LLM & AI Infrastructure Leader
+tagline: Solutions Architect | Enterprise AI & LLM Deployment Leader
 
 summary: >
-  Solutions architect with 10+ years designing and deploying enterprise AI systems
-  including LLMs, RAG frameworks, and MLOps platforms. Proven track record building trusted
-  advisor relationships with Fortune 500 customers, translating complex AI capabilities into
-  business value, and guiding technical architecture from discovery through production deployment.
-  Expert in evaluation frameworks, scalable cloud architectures, and enterprise AI integration
-  patterns. Skilled at bridging engineering, product, and GTM teams to accelerate customer
-  success and revenue growth while maintaining focus on safety and reliability.
+  Solutions Architect with 10+ years designing language and knowledge systems
+  for enterprise environments, now focused on production deployment of LLM-powered
+  applications. Began career implementing enterprise classification and search
+  systems within large industrial organizations, developing deep expertise in
+  information architecture, metadata modeling, and retrieval optimization.
+  Currently guides Fortune 50 and Fortune 500 organizations through secure,
+  governance-aware adoption of generative AI systems from discovery through
+  production deployment. Known for translating emerging AI capabilities into
+  durable enterprise architecture with rigor around evaluation, safety, and
+  long-term platform design.
 
 contact:
   address: 76 Roebling St, Apt 1B, Brooklyn, NY 11211
@@ -19,52 +22,50 @@ contact:
   github: https://github.com/joshsgoldstein
 
 technical_skills:
-- LLM & Generative AI Deployment (Claude, API integration, production patterns)
-- Enterprise AI Architecture & Integration (evaluation frameworks, scalable deployment)
-- Agentic Application Design (RAG frameworks, context management, multi-agent systems)
-- Vector Databases & Semantic Search (Multimodal, Hybrid Search)
-- MLOps Platform Architecture
-- AI Infrastructure & Enterprise Architecture
-- Kubernetes & Cloud-Native Systems (AWS / GCP / Azure)
-- Python Application Development
-- CI/CD & Observability
-- Data Engineering & Pipeline Design
-- Authentication & Authorization
-- Database Technologies (SQL / NoSQL / Graph)
-- Product Feedback Loops & Experimentation
+  - Language Systems Engineering (Search architecture, schema design, relevance tuning)
+  - Enterprise Classification & Knowledge Architecture
+  - NLP Enrichment Pipelines (NER, document classification, metadata modeling)
+  - Retrieval-Augmented Generation & Hybrid Search
+  - Enterprise LLM Deployment & Evaluation Frameworks
+  - Agent Orchestration (LangChain, LangGraph, multi-agent systems)
+  - Vector Databases & Multimodal Retrieval
+  - Custom LLM API & Gateway Design (OpenAI-compatible APIs, streaming, routing)
+  - MLOps & Inference Infrastructure (Kubernetes, Seldon, vLLM, Ollama)
+  - Production Python Services & API Architecture (FastAPI)
+  - Secure Enterprise Deployment (AuthN/AuthZ, governance-aware design)
+  - Cloud Platforms (AWS / GCP / Azure)
+  - Data Platform & Pipeline Architecture
 
 soft_skills:
-- Trusted Advisor & Customer Success (C-suite to engineering teams)
-- Translating Complex AI Capabilities for Diverse Stakeholders
-- Cross-Functional Leadership & Collaboration
-- Product & GTM Strategy Alignment
-- Technical Evangelism & Public Speaking
-- Team Mentorship & Enablement
-- Requirements Gathering & Solution Design
-- Strategic Storytelling & Communication
-- Self-Motivated & Outcome-Driven
+  - Enterprise Stakeholder Alignment (C-suite to Engineering)
+  - Translating AI Strategy into Technical Execution
+  - Cross-Functional Leadership
+  - Product & GTM Collaboration
+  - Technical Communication & Public Speaking
 
 publications:
-- title: 'Co-Author: AI in Production Field Notes Newsletter'
-  publication: TMLS Insights (Substack)
-  description: 'Technical newsletter reaching 9,000+ AI/ML practitioners, focusing on production AI deployment patterns, MLOps best practices, and enterprise AI adoption strategies. Published in partnership with TMLS community of 16,000 AI/ML professionals.'
-  url: https://tmlsinsights.substack.com
+  - title: "Co-Author: AI in Production Field Notes Newsletter"
+    publication: TMLS Insights (Substack)
+    description: >
+      Technical newsletter reaching 9,000+ AI/ML practitioners focused on
+      production AI deployment, evaluation rigor, and enterprise integration patterns.
+    url: https://tmlsinsights.substack.com
 
 speaking_engagements:
-- title: 'Purpose-Built Data Agents: This Is the Way'
-  event: MLOps World / Gen AI Summit - October 2025
-- title: 'The Value of Data Agentic Tooling: A Work in Progress'
-  event: MLOps World / Gen AI Summit - August 2025
-- title: 'WIP: Data and the Value of Data Agentic Tooling'
-  event: Toronto Machine Learning Summit - June 2025
-- title: From Model to Microservice > MLOps at Scale
-  event: Southern Data Science Conference - October 2022
-- title: Digital Experience for the Next Generation Knowledge Worker
-  event: Activate 2019
-- title: Common Mistakes Made Deploying a Search Application with Lucidworks Fusion
-  event: Activate 2018
-- title: Ethics in Tech
-  event: UC Berkeley EECS Honors Program
+  - title: "Purpose-Built Data Agents: This Is the Way"
+    event: MLOps World / Gen AI Summit - October 2025
+  - title: "The Value of Data Agentic Tooling: A Work in Progress"
+    event: MLOps World / Gen AI Summit - August 2025
+  - title: "Data and the Value of Agentic Tooling"
+    event: Toronto Machine Learning Summit - June 2025
+  - title: "From Model to Microservice: MLOps at Scale"
+    event: Southern Data Science Conference - October 2022
+  - title: "Digital Experience for the Next Generation Knowledge Worker"
+    event: Activate 2019
+  - title: "Common Mistakes Deploying Search with Lucidworks Fusion"
+    event: Activate 2018
+  - title: "Ethics in Tech"
+    event: UC Berkeley EECS Honors Program
 
 experience:
   - role: Principal Solutions Consultant
@@ -73,20 +74,20 @@ experience:
     start: Nov 2025
     end: Present
     bullets:
-    - Serving as field CTO advisor to AI governance platform company, defining product positioning and messaging, building technical demos, and creating customer-facing content to accelerate enterprise adoption and communicate complex AI safety concepts to diverse stakeholders.
-    - Advising in the role of CTO for a digital rights technology company on generative AI architecture and implementation, designing and building AI-powered solutions while enabling co-founders on emerging GenAI technologies and integration patterns.
-    - Consulting with beverage industry technology company on AI/ML integration strategy, architecting generative AI solutions and providing technical enablement to leadership team on LLM capabilities and software development.
+      - Serve as field CTO advisor to AI governance platform, translating regulatory and AI safety requirements into deployable enterprise architecture patterns.
+      - Advise digital rights technology company on generative AI system design, building production-ready LLM applications and guiding executive leadership on integration strategy.
+      - Lead AI integration strategy across industry clients, architecting scalable solutions aligned with security, reliability, and long-term platform considerations.
 
   - role: Customer Excellence Solutions Engineer
     company: Weaviate
-    location: Remote / Amsterdam, ND
+    location: Remote / Netherlands
     start: Aug 2024
     end: Oct 2025
     bullets:
-    - Served as primary technical advisor to Fortune 50 and enterprise customers, architecting LLM-powered agentic applications and semantic search solutions integrating RAG frameworks, multimodal retrieval, and generative AI pipelines from proof-of-concept through production deployment, including developing evaluation frameworks to measure performance for specific use cases.
-    - Partnered cross-functionally to strengthen enterprise positioning through product feedback loops, created technical enablement content (Jupyter notebooks, tutorials, LLM deployment patterns and RAG architectures deep dives), and delivered conference presentations on agentic AI capabilities and emerging generative AI integration patterns.
-    - Established standardized POC framework and product feedback processes to accelerate enterprise delivery and adoption, while mentoring new Solutions Engineers on customer engagement best practices and technical architecture patterns.
-    - Contributed to defining Weaviate's on-premises enterprise offering, enabling centralized data platform teams at Fortune 50 companies to develop production generative AI applications on secure, self-managed infrastructure with focus on safety and reliability.
+      - Served as primary technical advisor to Fortune 50 and enterprise customers, architecting LLM-powered retrieval and agentic systems from discovery through secure production deployment.
+      - Designed evaluation frameworks to measure retrieval quality, grounding fidelity, and system performance across RAG and multimodal architectures.
+      - Standardized enterprise POC methodology to accelerate stakeholder alignment across engineering, security, and data platform teams.
+      - Contributed to definition of on-prem enterprise offering, enabling regulated organizations to deploy generative AI within secure, self-managed infrastructure.
 
   - role: Senior Solutions Architect
     company: Seldon
@@ -94,11 +95,10 @@ experience:
     start: Jan 2022
     end: Jul 2024
     bullets:
-    - Built and led the North America Solutions Engineering function, creating repeatable customer engagement frameworks, standardized POC methodologies, and post-sales delivery patterns that improved time-to-value across enterprise and startup customers navigating complex stakeholder environments.
-    - Led technical design for Seldon's LLM product offering from concept to launch, defining agentic AI patterns, enterprise integration models, customer experience flows, and scalable deployment architectures that enabled Fortune 500 companies to adopt generative AI in production environments while maintaining safety and reliability standards.
-    - Served as primary technical advisor to enterprise customers throughout their ML and LLM adoption journey from technical discovery through deployment, translating business objectives into technical solutions and coordinating across Sales, Product, and Engineering teams to drive customer success.
-    - Contributed directly to MLServer (core product) by fixing production issues for customers, demonstrating hands-on technical depth that led to $500K+ renewal of an at-risk enterprise account and strengthened customer trust.
-    - Represented customer needs in engineering discussions and closed product feedback loops that strengthened Seldon's presence and adoption in the MLOps community, influencing product roadmap priorities based on enterprise deployment patterns.
+      - Built and led North America Solutions Engineering function, establishing repeatable engagement and deployment frameworks for enterprise ML and LLM adoption.
+      - Led architecture design for enterprise LLM product launch, defining integration models, governance patterns, and scalable deployment standards.
+      - Guided Fortune 500 customers through complex stakeholder environments, translating business objectives into secure ML infrastructure designs.
+      - Contributed directly to MLServer to resolve production issues, strengthening enterprise trust and securing renewal of at-risk account.
 
   - role: Senior Solutions Architect
     company: Keeeb Inc.
@@ -106,20 +106,19 @@ experience:
     start: Jan 2021
     end: Dec 2021
     bullets:
-    - Closed the company's first U.S. enterprise deal in the manufacturing sector by designing and delivering a proof of concept that integrated internal data sources into the company's internal enterprise content discovery platform, demonstrating technical value through hands-on solution architecture.
-    - Led technical and go-to-market execution for Keeeb's federated search platform, overseeing pre-sales, customer enablement, and solution design for enterprise accounts while navigating complex stakeholder environments.
-    - Contributed to product connectors that improved data accessibility, demonstrated agile engineering execution, and unlocked key features required to close first U.S. enterprise deal.
-    - Structured and led a joint engagement with a systems integrator to migrate a customer's legacy data system to the Microsoft ecosystem, aligning technical scope, pricing, and delivery to ensure success.
+      - Designed and delivered proof-of-concept architecture that secured the company’s first U.S. enterprise deal.
+      - Led technical and go-to-market execution for federated search platform across enterprise accounts.
+      - Structured joint system integrator engagement to migrate legacy systems into Microsoft ecosystem.
 
-  - role: Principle
+  - role: Principal
     company: The Solutions Guys LLC
     location: New York, NY
-    start: Dec 2020
-    end: Jan 2020
+    start: Jan 2020
+    end: Dec 2020
     bullets:
-    - Independent consultant delivering technical architecture and go-to-market strategy for emerging technology companies
-    - "Project 1: Defined ideal customer profile (ICP), built outreach programs, and guided product enhancements for e-commerce search platform's US market entry"
-    - "Project 2: Designed and architected job search system for stealth career search platform, defining technical requirements and implementation roadmap"
+      - Delivered enterprise search and AI architecture strategy for emerging technology companies.
+      - Defined ICP, outreach strategy, and product enhancement roadmap for U.S. market expansion initiatives.
+      - Architected job search platform infrastructure and technical roadmap for early-stage startup.
 
   - role: Business Innovation Manager
     company: Lucidworks Inc.
@@ -127,10 +126,9 @@ experience:
     start: Mar 2019
     end: Dec 2019
     bullets:
-    - Partnered with Product and Engineering leadership to design and prototype new capabilities for Lucidworks Fusion, drawing on experience as one of the platform's first enterprise customers and an early subject-matter expert.
-    - Helped define and deliver key product initiatives including a product merchandiser for digital commerce and a low-code/no-code framework for building search applications, contributing to both the initial and next-generation versions.
-    - Led Lucidworks' first beta program for new products, coordinating with early adopters to capture feedback that informed roadmap priorities and drove product-market fit.
-    - Collaborated with Customer Success and field teams to turn customer insights into product requirements, driving retention and expansion within enterprise accounts.
+      - Partnered with Product and Engineering leadership to design and prototype enterprise search capabilities.
+      - Led beta programs translating enterprise feedback into roadmap priorities.
+      - Bridged customer insights and engineering execution to improve retention and expansion.
 
   - role: Solution Architect
     company: Lucidworks Inc.
@@ -138,11 +136,9 @@ experience:
     start: Jun 2017
     end: Mar 2019
     bullets:
-    - Designed and implemented enterprise search and knowledge solutions using Lucidworks Fusion and Apache Solr for Fortune 500 customers across technology and energy sectors, serving as technical advisor throughout implementation.
-    - Influenced product direction by relaying customer needs to Product teams and validating new Fusion capabilities with key accounts, ensuring field feedback shaped development priorities.
-    - Integrated third-party technologies and vendor tools into the Lucidworks stack to expand solution capabilities and support complex customer environments, enabling a Fortune 10 energy company to unlock enterprise search for the entire organization.
-    - Created product demos for sales and marketing that contributed to Lucidworks' inclusion in the Gartner Magic Quadrant for Insight Engines.
-    - Mentored new Solution Architects following the Twigkit acquisition, training them in search theory, Fusion, and Solr technologies.
+      - Designed enterprise search architectures for Fortune 500 organizations, including schema design, relevance tuning, and large-scale content indexing strategies.
+      - Optimized ranking models and metadata enrichment workflows to improve discovery quality across complex knowledge repositories.
+      - Integrated distributed systems and third-party data sources to support secure enterprise-wide search deployments.
 
   - role: Sales Engineer
     company: Lucidworks Inc.
@@ -150,9 +146,9 @@ experience:
     start: Feb 2016
     end: Jun 2017
     bullets:
-    - Supported sales teams by designing and presenting search-based solutions to enterprise clients, leading proof-of-concept projects for opportunities ranging from $100K-$1M+ while navigating complex stakeholder environments.
-    - Directly contributed to 15 consecutive quarters of sales growth by delivering technical wins in complex enterprise evaluations as a trusted technical advisor.
-    - Acted as a technical liaison between customers and engineering, ensuring field feedback informed early product releases and feature prioritization.
+      - Led enterprise proof-of-concept engagements ranging from $100K–$1M+ opportunities.
+      - Served as trusted technical advisor across complex stakeholder environments.
+      - Partnered with engineering to align early product releases with field requirements.
 
   - role: Co-Founder / Technical Lead
     company: Mulsanne Dashboards
@@ -160,14 +156,25 @@ experience:
     start: Apr 2014
     end: Jan 2016
     bullets:
-    - Designed and led development of Mulsanne Dashboards, an executive-level news and analytics platform that delivered personalized, business-critical updates to help leaders make better decisions throughout the day.
-    - Architected and implemented the platform's end-to-end infrastructure using Apache Solr, ExpressJS, and MongoDB, supporting real-time data ingestion, indexing, and search.
-    - Built an NLP/ML data pipeline that aggregated and classified news using RSS feeds, web scraping, NLP techniques, and bespoke machine-learning models developed with an external partner.
+      - Architected a Solr-based executive intelligence platform leveraging relevance tuning and schema-driven indexing.
+      - Designed NLP enrichment pipeline using entity extraction and document classification to enhance retrieval quality.
+      - Built large-scale ingestion and indexing system supporting real-time content processing and metadata optimization.
+
+  - role: SharePoint Consultant
+    company: iimagineIT
+    location: Houston, TX
+    start: Feb 2012
+    end: Apr 2014
+    bullets:
+      - Designed and implemented enterprise knowledge management and collaboration systems for large industrial organizations.
+      - Developed classification and metadata-driven document architectures to improve discoverability and governance across complex content repositories.
+      - Embedded within client organizations as on-site consultant, translating business requirements into scalable information architecture solutions.
+      - Delivered enterprise training programs and advised on collaboration and knowledge management best practices.
 
 education:
-- degree: 'Bachelor of Science: Information Technology'
-  school: Rochester Institute of Technology
-  location: Rochester, NY
-  start: Aug 2007
-  end: Dec 2011
-  notes: Concentrations in Finance and Communications.
+  - degree: "Bachelor of Science: Information Technology"
+    school: Rochester Institute of Technology
+    location: Rochester, NY
+    start: Aug 2007
+    end: Dec 2011
+    notes: Concentrations in Finance and Communications.
