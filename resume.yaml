@@ -164,6 +164,18 @@ experience:
     - Architected and implemented the platform's end-to-end infrastructure using Apache Solr, ExpressJS, and MongoDB, supporting real-time data ingestion, indexing, and search.
     - Built an NLP/ML data pipeline that aggregated and classified news using RSS feeds, web scraping, NLP techniques, and bespoke machine-learning models developed with an external partner.
 
+  - role: SharePoint Consultant
+  company: IImagineIT
+  location: Houston, TX
+  start: Feb 2012
+  end: Apr 2014
+  bullets:
+  - Designed and implemented AI-powered classification systems within SharePoint ecosystem for oil and gas business units, improving document organization and knowledge discovery across enterprise content repositories.
+  - Served as embedded consultant representing IImagineIT within client offices, acting as technical advisor and responding to day-to-day technical needs while building trusted relationships with stakeholders.
+  - Developed and delivered training programs on collaboration and knowledge management best practices, translating complex technical capabilities into business value for diverse audiences.
+  - Provided consulting services on enterprise content management and information architecture, enabling Fortune 500 energy companies to improve employee productivity and information accessibility.
+ 
+
 education:
 - degree: 'Bachelor of Science: Information Technology'
   school: Rochester Institute of Technology
