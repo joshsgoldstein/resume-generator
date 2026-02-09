@@ -150,7 +150,7 @@ experience:
       - Served as trusted technical advisor across complex stakeholder environments.
       - Partnered with engineering to align early product releases with field requirements.
 
-  - role: Co-Founder / Technical Lead
+  - role: Co-Founder
     company: Mulsanne Dashboards
     location: Houston, TX
     start: Apr 2014
@@ -170,6 +170,18 @@ experience:
       - Developed classification and metadata-driven document architectures to improve discoverability and governance across complex content repositories.
       - Embedded within client organizations as on-site consultant, translating business requirements into scalable information architecture solutions.
       - Delivered enterprise training programs and advised on collaboration and knowledge management best practices.
+
+  - role: SharePoint Consultant
+  company: IImagineIT
+  location: Houston, TX
+  start: Feb 2012
+  end: Apr 2014
+  bullets:
+  - Designed and implemented AI-powered classification systems within SharePoint ecosystem for oil and gas business units, improving document organization and knowledge discovery across enterprise content repositories.
+  - Served as embedded consultant representing IImagineIT within client offices, acting as technical advisor and responding to day-to-day technical needs while building trusted relationships with stakeholders.
+  - Developed and delivered training programs on collaboration and knowledge management best practices, translating complex technical capabilities into business value for diverse audiences.
+  - Provided consulting services on enterprise content management and information architecture, enabling Fortune 500 energy companies to improve employee productivity and information accessibility.
+ 
 
 education:
   - degree: "Bachelor of Science: Information Technology"
