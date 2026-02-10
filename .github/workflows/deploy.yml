@@ -31,14 +31,18 @@ jobs:
           pip install jinja2 playwright pyyaml
           playwright install chromium --with-deps
 
-      - name: Generate resume HTML
-        run: python generate_resume.py
+      - name: Generate resume files
+        run: |
+          python generate_resume.py
+          python generate_markdown.py
 
       - name: Prepare deployment directory
         run: |
           mkdir -p _site
           cp resume.html resume_ats.html _site/
           cp resume.pdf resume_ats.pdf _site/
+          cp resume.md _site/
+          cp resume.yaml resume_data.json _site/
           cp resume_style.css resume_style_ats.css _site/
           cp index.html _site/ 2>/dev/null || echo "No index.html yet"
 

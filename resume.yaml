@@ -112,7 +112,7 @@ experience:
 
   - role: Principal
     company: The Solutions Guys LLC
-    location: New York, NY
+    location: Remote / New York, NY
     start: Jan 2020
     end: Dec 2020
     bullets:
@@ -161,7 +161,7 @@ experience:
       - Built large-scale ingestion and indexing system supporting real-time content processing and metadata optimization.
 
   - role: SharePoint Consultant
-    company: iimagineIT
+    company: iImagineIT
     location: Houston, TX
     start: Feb 2012
     end: Apr 2014

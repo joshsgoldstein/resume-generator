@@ -1,0 +1,50 @@
+{
+    "target_roles": [
+      "Principal Solutions Architect",
+      "Senior Solutions Architect",
+      "Staff Solutions Engineer",
+      "Forward Deployed Engineer",
+      "Solutions Engineering Manager",
+      "Technical Lead - Solutions"
+    ],
+    "salary_minimum": 260000,
+    "location": "Remote only",
+    "industries": [
+      "AI/ML platforms",
+      "LLM/GenAI platforms",
+      "AI infrastructure and tooling",
+      "Developer tools for AI",
+      "Vector databases",
+      "Data infrastructure and platforms",
+      "Search/Information retrieval",
+      "MLOps platforms",
+      "AI observability and monitoring",
+      "AI governance and safety",
+      "Data quality and lineage",
+      "AI evaluation and testing platforms"
+    ],
+    "strengths": [
+      "10+ years solutions architecture and pre-sales experience",
+      "AI/ML systems architecture (RAG, vector DBs, agentic applications)",
+      "Enterprise search and information retrieval (Lucidworks, Solr background)",
+      "Hands-on technical builder (contributes to production codebases)",
+      "Team building and leadership (established NA Solutions Engineering at Seldon)",
+      "Cross-functional collaboration (Engineering, Product, GTM alignment)",
+      "Technical evangelism and public speaking (MLOps World, TMLS, conferences)",
+      "Deep technical expertise: Python, Kubernetes, cloud-native systems, LLM deployment",
+      "Fortune 500 and high-growth startup experience",
+      "Product influence and customer feedback loops"
+    ],
+    "avoid": [
+      "Pure sales roles without hands-on technical component",
+      "Non-remote positions",
+      "Early-stage startups (pre-Series A)",
+      "Consumer/B2C products",
+      "Roles requiring 50%+ travel",
+      "Pure consulting (billable hours focus)",
+      "Positions below $260K OTE"
+    ],
+    "linkedin_url": "https://linkedin.com/in/joshsgoldstein",
+    "years_experience": 10,
+    "last_updated": "2025-02-07"
+  }

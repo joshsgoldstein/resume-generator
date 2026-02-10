@@ -1,4 +1,4 @@
 jinja2
+livereload
 playwright
 pyyaml
-livereload

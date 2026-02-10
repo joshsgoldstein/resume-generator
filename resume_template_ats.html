@@ -21,9 +21,9 @@
     </div>
     {% if contact.linkedin or contact.github or contact.website %}
     <div class="contact-line">
-        {% if contact.linkedin %}<span>{{ contact.linkedin }}</span>{% endif %}
-        {% if contact.github %}{% if contact.linkedin %}<span>|</span>{% endif %}<span>{{ contact.github }}</span>{% endif %}
-        {% if contact.website %}{% if contact.linkedin or contact.github %}<span>|</span>{% endif %}<span>{{ contact.website }}</span>{% endif %}
+        {% if contact.linkedin %}<span><a href="{{ contact.linkedin }}">{{ contact.linkedin }}</a></span>{% endif %}
+        {% if contact.github %}{% if contact.linkedin %}<span>|</span>{% endif %}<span><a href="{{ contact.github }}">{{ contact.github }}</a></span>{% endif %}
+        {% if contact.website %}{% if contact.linkedin or contact.github %}<span>|</span>{% endif %}<span><a href="{{ contact.website }}">{{ contact.website }}</a></span>{% endif %}
     </div>
     {% endif %}
 </header>
@@ -97,7 +97,13 @@
     <div class="speaking-item">
         <div class="speaking-title">{{ pub.title }}</div>
         {% if pub.publication %}
-        <div class="speaking-event">{{ pub.publication }}</div>
+        <div class="speaking-event">
+            {% if pub.url %}
+            <a href="{{ pub.url }}">{{ pub.publication }}</a>
+            {% else %}
+            {{ pub.publication }}
+            {% endif %}
+        </div>
         {% endif %}
         {% if pub.description %}
         <div class="edu-notes" style="margin-top: 4px;">{{ pub.description }}</div>

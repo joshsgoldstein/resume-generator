@@ -1,10 +1,11 @@
-.PHONY: help all install yaml2json json2yaml generate generate-md clean serve watch
+.PHONY: help all install playwright-install yaml2json json2yaml generate generate-md clean serve watch
 
 # Default target
 help:
 	@echo "Resume Generator - Available Commands:"
 	@echo ""
-	@echo "  make install      - Install required Python packages"
+	@echo "  make install      - Sync Python environment with uv"
+	@echo "  make playwright-install - Install Playwright Chromium browser"
 	@echo "  make all          - Generate all outputs (PDFs + Markdown)"
 	@echo "  make yaml2json    - Convert resume.yaml → resume.json"
 	@echo "  make json2yaml    - Convert resume.json → resume.yaml"
@@ -17,31 +18,35 @@ help:
 
 # Install dependencies
 install:
-	@echo "Installing Python dependencies..."
-	pip install jinja2 playwright pyyaml
+	@echo "Syncing Python dependencies with uv..."
+	uv sync
 	@echo "Installing Playwright browsers..."
-	playwright install chromium
+	$(MAKE) playwright-install
 	@echo "✓ Installation complete!"
+
+# Install Playwright browser binaries
+playwright-install:
+	uv run playwright install chromium
 
 # Convert YAML to JSON
 yaml2json:
 	@echo "Converting resume.yaml → resume.json..."
-	python yaml_to_json.py
+	uv run python yaml_to_json.py
 
 # Convert JSON to YAML
 json2yaml:
 	@echo "Converting resume.json → resume.yaml..."
-	python json_to_yaml.py
+	uv run python json_to_yaml.py
 
 # Generate all resume versions (HTML + PDF)
-generate:
+generate: playwright-install
 	@echo "Generating resumes..."
-	python generate_resume.py
+	uv run python generate_resume.py
 
 # Generate beautiful markdown resume
 generate-md:
 	@echo "Generating beautiful markdown..."
-	python generate_markdown.py
+	uv run python generate_markdown.py
 
 # Full workflow: generate all outputs
 all: generate generate-md
@@ -52,19 +57,19 @@ all: generate generate-md
 	@echo "  - resume.md (formatted markdown)"
 
 # Start HTTP server to view resumes
-serve:
+serve: generate generate-md
 	@echo "Starting HTTP server on http://localhost:8000"
 	@echo "  http://localhost:8000/            → Landing page"
 	@echo "  http://localhost:8000/resume.html → Visual resume"
 	@echo "  http://localhost:8000/resume_ats.html → ATS resume"
 	@echo ""
 	@echo "Press Ctrl+C to stop the server"
-	python -m http.server 8000
+	uv run python -m http.server 8000
 
 # Hot reload server - auto-regenerates on file changes
 watch:
 	@echo "Starting hot reload server..."
-	python watch.py
+	uv run python watch.py
 
 # Clean generated files
 clean:
