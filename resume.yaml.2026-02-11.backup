@@ -2,17 +2,16 @@ name: Josh Goldstein
 tagline: Solutions Architect | Enterprise AI & LLM Deployment Leader
 
 summary: >
-  Technical AI leader with 13+ years operating at the intersection of search,
-  LLM infrastructure, and enterprise governance. From early classification
-  engines and search platforms to modern LLM and agentic systems, developed
-  expertise in enterprise architecture, data modeling, retrieval optimization,
-  and AI infrastructure through deployments at Fortune 50, Fortune 500, and
-  high-growth startups. Guides enterprises through secure, governance-aware
-  AI adoption from discovery through production, with emphasis on evaluation
-  frameworks, safety controls, and scalable platform architecture. Operates at
-  the intersection of engineering, product, and GTM teams, translating
-  complex technical capabilities into measurable business outcomes and accelerating
-  enterprise revenue and customer success.
+  Solutions Architect with 10+ years designing language and knowledge systems
+  for enterprise environments, now focused on production deployment of LLM-powered
+  applications. Began career implementing enterprise classification and search
+  systems within large industrial organizations, developing deep expertise in
+  information architecture, metadata modeling, and retrieval optimization.
+  Currently guides Fortune 50 and Fortune 500 organizations through secure,
+  governance-aware adoption of generative AI systems from discovery through
+  production deployment. Known for translating emerging AI capabilities into
+  durable enterprise architecture with rigor around evaluation, safety, and
+  long-term platform design.
 
 contact:
   address: 76 Roebling St, Apt 1B, Brooklyn, NY 11211
@@ -23,25 +22,25 @@ contact:
   github: https://github.com/joshsgoldstein
 
 technical_skills:
-  - Enterprise LLM Deployment & Evaluation Frameworks
-  - Retrieval-Augmented Generation & Hybrid Search Systems
-  - Agent Orchestration & Multi-Agent Systems (LangChain, LangGraph)
-  - Vector Databases & Multimodal Retrieval
   - Language Systems Engineering (Search architecture, schema design, relevance tuning)
-  - MLOps & Inference Infrastructure (Kubernetes, Seldon, vLLM, Ollama)
-  - Custom LLM API & Gateway Design (OpenAI-compatible APIs, streaming, routing)
-  - Production Python Services & API Architecture (FastAPI)
   - Enterprise Classification & Knowledge Architecture
   - NLP Enrichment Pipelines (NER, document classification, metadata modeling)
-  - Secure Enterprise Deployment (AuthN/AuthZ, governance controls)
+  - Retrieval-Augmented Generation & Hybrid Search
+  - Enterprise LLM Deployment & Evaluation Frameworks
+  - Agent Orchestration (LangChain, LangGraph, multi-agent systems)
+  - Vector Databases & Multimodal Retrieval
+  - Custom LLM API & Gateway Design (OpenAI-compatible APIs, streaming, routing)
+  - MLOps & Inference Infrastructure (Kubernetes, Seldon, vLLM, Ollama)
+  - Production Python Services & API Architecture (FastAPI)
+  - Secure Enterprise Deployment (AuthN/AuthZ, governance-aware design)
   - Cloud Platforms (AWS / GCP / Azure)
   - Data Platform & Pipeline Architecture
 
 soft_skills:
-  - Trusted Advisor to Enterprise Stakeholders (C-suite to Engineering)
+  - Enterprise Stakeholder Alignment (C-suite to Engineering)
   - Translating AI Strategy into Technical Execution
-  - Cross-Functional Leadership & Collaboration
-  - Product & Go-to-Market Alignment
+  - Cross-Functional Leadership
+  - Product & GTM Collaboration
   - Technical Communication & Public Speaking
 
 publications:
@@ -75,9 +74,9 @@ experience:
     start: Nov 2025
     end: Present
     bullets:
-      - Serving as field CTO advisor to AI governance platform, translating regulatory and AI safety requirements into deployable enterprise architecture patterns.
-      - Advising digital rights technology company on generative AI system design, building production-ready LLM applications and guiding executive leadership on integration strategy.
-      - Leading AI integration strategy across industry clients, architecting scalable solutions aligned with security, reliability, and long-term platform considerations.
+      - Serve as field CTO advisor to AI governance platform, translating regulatory and AI safety requirements into deployable enterprise architecture patterns.
+      - Advise digital rights technology company on generative AI system design, building production-ready LLM applications and guiding executive leadership on integration strategy.
+      - Lead AI integration strategy across industry clients, architecting scalable solutions aligned with security, reliability, and long-term platform considerations.
 
   - role: Customer Excellence Solutions Engineer
     company: Weaviate
@@ -117,12 +116,9 @@ experience:
     start: Jan 2020
     end: Dec 2020
     bullets:
-      - Led independent consultancy delivering technical architecture and go-to-market
-        strategy for emerging search technology companies
-      - 'Project 1: Defined ideal customer profile (ICP), built outreach programs, and
-        guided product enhancements for e-commerce search platform''s US market entry'
-      - 'Project 2: Designed and architected job search system for stealth career search
-        platform, defining technical requirements and implementation roadmap'
+      - Delivered enterprise search and AI architecture strategy for emerging technology companies.
+      - Defined ICP, outreach strategy, and product enhancement roadmap for U.S. market expansion initiatives.
+      - Architected job search platform infrastructure and technical roadmap for early-stage startup.
 
   - role: Business Innovation Manager
     company: Lucidworks Inc.
@@ -130,19 +126,9 @@ experience:
     start: Mar 2019
     end: Dec 2019
     bullets:
-      - Partnered with Product and Engineering leadership to design and prototype new
-        capabilities for Lucidworks Fusion, drawing on experience as one of the platform's
-        first enterprise customers and an early subject-matter expert.
-      - Helped define and deliver key product initiatives including a product merchandiser
-        for digital commerce and a low-code/no-code framework for building search applications,
-        contributing to both the initial and next-generation versions.
-      - Led Lucidworks' first beta program for new products, coordinating with early adopters
-        to capture feedback that informed roadmap priorities and drove product-market
-        fit.
-      - Collaborated with Customer Success and field teams to turn customer insights into
-        product requirements, driving retention and expansion within enterprise accounts.
-      - Created product demos for sales and marketing that contributed to Lucidworks'
-        inclusion in the Gartner Magic Quadrant for Insight Engines.
+      - Partnered with Product and Engineering leadership to design and prototype enterprise search capabilities.
+      - Led beta programs translating enterprise feedback into roadmap priorities.
+      - Bridged customer insights and engineering execution to improve retention and expansion.
 
   - role: Solution Architect
     company: Lucidworks Inc.
@@ -150,11 +136,9 @@ experience:
     start: Jun 2017
     end: Mar 2019
     bullets:
-      - Designed and implemented enterprise search and knowledge solutions for Fortune 500 customers  across technology and energy
-        sectors
-      - Integrated third-party technologies and vendor tools into the Lucidworks stack to expand solution capabilities and support complex customer environments enabling a fortune 10 energy company to unlock value in wells that were previously un-drillable.
-      - Mentored new Solution Architects following the Twigkit acquisition, training them in search theory, Fusion, and Solr technologies.
-      - Developed internal enablement programs and workshops to strengthen technical expertise across customer-facing teams and introduce new features in the Lucidworks product suite.
+      - Designed enterprise search architectures for Fortune 500 organizations, including schema design, relevance tuning, and large-scale content indexing strategies.
+      - Optimized ranking models and metadata enrichment workflows to improve discovery quality across complex knowledge repositories.
+      - Integrated distributed systems and third-party data sources to support secure enterprise-wide search deployments.
 
   - role: Sales Engineer
     company: Lucidworks Inc.
@@ -162,12 +146,9 @@ experience:
     start: Feb 2016
     end: Jun 2017
     bullets:
-      - Led enterprise proof-of-concept engagements ranging from $100K–$1M+ opportunities while acting as trusted technical advisor across complex stakeholder environments.
+      - Led enterprise proof-of-concept engagements ranging from $100K–$1M+ opportunities.
+      - Served as trusted technical advisor across complex stakeholder environments.
       - Partnered with engineering to align early product releases with field requirements.
-      - Acted as a technical partner with product and engineering, ensuring field
-        feedback informed early product releases and feature prioritization.
-      - Enhanced Lucidworks' training program by leveraging AWS to improve reliability,
-        scalability, and instructional content. Running a 400+ person training program at the Solr Conf in 2016.
 
   - role: Co-Founder
     company: Mulsanne Dashboards
