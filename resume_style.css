@@ -13,6 +13,13 @@ body {
     margin: 0 auto;
 }
 
+@media screen {
+    body {
+        width: 80%;
+        max-width: none;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
