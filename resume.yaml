@@ -107,9 +107,18 @@ experience:
     start: Jan 2021
     end: Dec 2021
     bullets:
-      - Designed and delivered proof-of-concept architecture that secured the company’s first U.S. enterprise deal.
-      - Led technical and go-to-market execution for federated search platform across enterprise accounts.
-      - Structured joint system integrator engagement to migrate legacy systems into Microsoft ecosystem.
+      - Closed the company's first U.S. enterprise deal in the manufacturing sector by
+        designing and delivering a proof of concept that integrated internal data sources
+        into the companies internal enterprise content discovery platform.
+      - Led technical and go-to-market execution for Keeeb's federated search platform,
+        overseeing pre-sales, customer enablement, and solution design for enterprise
+        accounts.
+      - Contributed to product connectors that improved data accessibility, demonstrated
+        agile engineering execution, and unlocked key features required to close first
+        U.S. enterprise deal.
+      - Structured and led a joint engagement with a systems integrator to migrate a customer's
+        legacy data system to the Microsoft ecosystem, aligning technical scope, pricing,
+        and delivery to ensure success.
 
   - role: Principal
     company: The Solutions Guys LLC
@@ -130,15 +139,15 @@ experience:
     start: Mar 2019
     end: Dec 2019
     bullets:
+      - Led Lucidworks' first beta program for new products, coordinating with early adopters
+        to capture feedback that informed roadmap priorities and drove product-market
+        fit starting with a top Athleisure brand
       - Partnered with Product and Engineering leadership to design and prototype new
         capabilities for Lucidworks Fusion, drawing on experience as one of the platform's
         first enterprise customers and an early subject-matter expert.
       - Helped define and deliver key product initiatives including a product merchandiser
         for digital commerce and a low-code/no-code framework for building search applications,
         contributing to both the initial and next-generation versions.
-      - Led Lucidworks' first beta program for new products, coordinating with early adopters
-        to capture feedback that informed roadmap priorities and drove product-market
-        fit.
       - Collaborated with Customer Success and field teams to turn customer insights into
         product requirements, driving retention and expansion within enterprise accounts.
       - Created product demos for sales and marketing that contributed to Lucidworks'
