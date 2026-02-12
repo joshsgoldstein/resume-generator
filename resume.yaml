@@ -77,7 +77,7 @@ experience:
     bullets:
       - Serving as field CTO advisor to AI governance platform, translating regulatory and AI safety requirements into deployable enterprise architecture patterns.
       - Advising digital rights technology company on generative AI system design, building production-ready LLM applications and guiding executive leadership on integration strategy.
-      - Leading AI integration strategy across industry clients, architecting scalable solutions aligned with security, reliability, and long-term platform considerations.
+      - Enabling and leading AI and software integration strategy across industry clients, architecting scalable solutions aligned with security, reliability, and long-term platform considerations.
 
   - role: Customer Excellence Solutions Engineer
     company: Weaviate
@@ -86,9 +86,13 @@ experience:
     end: Oct 2025
     bullets:
       - Served as primary technical advisor to Fortune 50 and enterprise customers, architecting LLM-powered retrieval and agentic systems from discovery through secure production deployment.
-      - Designed evaluation frameworks to measure retrieval quality, grounding fidelity, and system performance across RAG and multimodal architectures.
-      - Standardized enterprise POC methodology to accelerate stakeholder alignment across engineering, security, and data platform teams.
-      - Contributed to definition of on-prem enterprise offering, enabling regulated organizations to deploy generative AI within secure, self-managed infrastructure.
+      - Partnered cross-functionally to strengthen enterprise positioning through customer
+        feedback, technical enablement content (Jupyter notebooks, tutorials, eBooks),
+        and conference presentations, while advising teams and clients on emerging AI
+        capabilities.
+      - Mentored new Solutions Engineers and established standardized POC framework and
+        product feedback processes to accelerate enterprise delivery and adoption.
+      - Contributed to definition of on-prem enterprise offering, enabling regulated organizations to deploy generative AI within secure, self-managed infrastructure leading to the close of a Fortune 50 financial services customer.
 
   - role: Senior Solutions Architect
     company: Seldon
@@ -96,10 +100,11 @@ experience:
     start: Jan 2022
     end: Jul 2024
     bullets:
-      - Built and led North America Solutions Engineering function, establishing repeatable engagement and deployment frameworks for enterprise ML and LLM adoption.
-      - Led architecture design for enterprise LLM product launch, defining integration models, governance patterns, and scalable deployment standards.
-      - Guided Fortune 500 customers through complex stakeholder environments, translating business objectives into secure ML infrastructure designs.
-      - Contributed directly to MLServer to resolve production issues, strengthening enterprise trust and securing renewal of at-risk account.
+      - Established the North America Solutions Engineering function, creating repeatable
+        customer engagement frameworks, POC methodologies, and post-sales delivery patterns
+        that improved time-to-value across enterprise and startup customers leading to $1m+ in new logs and renewals.
+      - Co-designed Seldon's LLM product offering, defining early agentic AI patterns, governance patterns, customer experience flows,integration models, and scalable deployment standards.
+      - Contributed to core product code unlocking monitoring capabilities which lead the completion of the renewal of an at-risk large manufacturing enterprise account.
 
   - role: Senior Solutions Architect
     company: Keeeb Inc.

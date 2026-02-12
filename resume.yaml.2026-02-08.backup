@@ -1,16 +1,15 @@
 name: Josh Goldstein
 tagline: Principal Solutions Architect | AI Infrastructure & Solutions Leader
-summary: Technical AI leader with 13+ years operating at the intersection of search,
-      LLM infrastructure, and enterprise governance. From early classification
-      engines and search platforms to modern LLM and agentic systems, developed
-      expertise in enterprise architecture, data modeling, retrieval optimization,
-      and AI infrastructure through deployments at Fortune 50, Fortune 500, and
-      high-growth startups. Guides enterprises through secure, governance-aware
-      AI adoption from discovery through production, with emphasis on evaluation
-      frameworks, safety controls, and scalable platform architecture. Operates at
-      the intersection of engineering, product, and GTM teams, translating
-      complex technical capabilities into measurable business outcomes and accelerating
-      enterprise revenue and customer success.
+summary: 'Technical leader with over 10 years of experience architecting and scaling
+  AI infrastructure and enterprise search solutions from pre-sales through production.
+  Proven track record of building large-scale data solutions, influencing product
+  roadmaps, and supporting multi-million dollar opportunities across Fortune 500 companies
+  and high-growth startups. Expertise in information retrieval and LLM/MLOps, with
+  a passion for translating complex technology into business outcomes. Skilled at
+  bridging engineering, product, and GTM teams to accelerate customer success and
+  revenue growth.
+
+  '
 contact:
   address: 76 Roebling St, Apt 1B, Brooklyn, NY 11211
   phone: 305-321-6144
@@ -92,7 +91,7 @@ experience:
   - Designed and implemented enterprise-grade inference systems and deployment patterns
     for ML Endpoints, improving reliability, scalability, and time to production for
     customers deploying machine learning models at scale and deploying GenAi applications.
-  - Represented customer needs in engineering discussions and closed feedback loops
+  - Represented customer nwheneeds in engineering discussions and closed feedback loops
     that strengthened Seldon's presence and adoption in the MLOps community.
 - role: Senior Solutions Architect
   company: Keeeb Inc.
@@ -156,7 +155,7 @@ experience:
   - Integrated third-party technologies and vendor tools into the Lucidworks stack
     to expand solution capabilities and support complex customer environments enabling
     a fortune 10 energy company to unlock enterprise search for the entire organization
-    .
+    
   - Created product demos for sales and marketing that contributed to Lucidworks'
     inclusion in the Gartner Magic Quadrant for Insight Engines.
   - Mentored new Solution Architects following the Twigkit acquisition, training them
